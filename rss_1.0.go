@@ -13,6 +13,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 	warnings := false
 	feed := rss1_0Feed{}
 	p := xml.NewDecoder(bytes.NewReader(data))
+	p.Strict = false
 	p.CharsetReader = charsetReader
 	err := p.Decode(&feed)
 	if err != nil {
