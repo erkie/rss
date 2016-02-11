@@ -42,9 +42,9 @@ func parseTime(s string) (time.Time, error) {
 	for _, layout := range TimeLayouts {
 		t, e = time.Parse(layout, s)
 		if e == nil {
-			return t, e
+			return t, nil
 		}
 	}
 
-	return time.Time{}, e
+	return time.Unix(0, 0), nil
 }
