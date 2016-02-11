@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"net"
 	"net/http"
 	"strings"
 	"text/tabwriter"
@@ -82,83 +81,15 @@ func FetchByFunc(fetchFunc FetchFunc, url string) (*Feed, error) {
 
 // Feed is the top-level structure.
 type Feed struct {
-	Nickname    string              `json:"nickname"` // This is not set by the package, but could be helpful.
-	Title       string              `json:"title"`
-	Description string              `json:"description"`
-	Link        string              `json:"link"`      // Link to the creator's website.
-	UpdateURL   string              `json:"updateurl"` // URL of the feed itself.
-	Image       *Image              `json:"image"`     // Feed icon.
-	Items       []*Item             `json:"items"`
-	ItemMap     map[string]struct{} `json:"itemmap"` // Used in checking whether an item has been seen before.
-	Refresh     time.Time           `json:"refresh"` // Earliest time this feed should next be checked.
-	Unread      uint32              `json:"unread"`  // Number of unread items. Used by aggregators.
-	FetchFunc   FetchFunc           `json:"-"`
-}
-
-type refreshError string
-
-var _ net.Error = refreshError("")
-
-func (r refreshError) Error() string {
-	return string(r)
-}
-
-func (r refreshError) Timeout() bool {
-	return false
-}
-
-func (r refreshError) Temporary() bool {
-	return true
-}
-
-var ErrUpdateNotReady refreshError = "not ready to update: too soon to refresh"
-
-// Update fetches any new items and updates f.
-func (f *Feed) Update() error {
-	if f.FetchFunc == nil {
-		f.FetchFunc = DefaultFetchFunc
-	}
-	return f.UpdateByFunc(f.FetchFunc)
-}
-
-func (f *Feed) UpdateByFunc(fetchFunc FetchFunc) error {
-
-	// Check that we don't update too often.
-	if f.Refresh.After(time.Now()) {
-		return ErrUpdateNotReady
-	}
-
-	if f.UpdateURL == "" {
-		return errors.New("Error: feed has no URL.")
-	}
-
-	if f.ItemMap == nil {
-		f.ItemMap = make(map[string]struct{})
-		for _, item := range f.Items {
-			if _, ok := f.ItemMap[item.ID]; !ok {
-				f.ItemMap[item.ID] = struct{}{}
-			}
-		}
-	}
-
-	update, err := FetchByFunc(fetchFunc, f.UpdateURL)
-	if err != nil {
-		return err
-	}
-
-	f.Refresh = update.Refresh
-	f.Title = update.Title
-	f.Description = update.Description
-
-	for _, item := range update.Items {
-		if _, ok := f.ItemMap[item.ID]; !ok {
-			f.Items = append(f.Items, item)
-			f.ItemMap[item.ID] = struct{}{}
-			f.Unread++
-		}
-	}
-
-	return nil
+	Nickname    string // This is not set by the package, but could be helpful.
+	Title       string
+	Description string
+	Link        string // Link to the creator's website.
+	UpdateURL   string // URL of the feed itself.
+	Image       *Image // Feed icon.
+	Items       []*Item
+	Refresh     time.Time // Earliest time this feed should next be checked.
+	Unread      uint32    // Number of unread items. Used by aggregators.
 }
 
 func (f *Feed) String() string {

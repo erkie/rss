@@ -35,15 +35,9 @@ func parseAtom(data []byte) (*Feed, error) {
 	}
 
 	out.Items = make([]*Item, 0, len(feed.Items))
-	out.ItemMap = make(map[string]struct{})
 
 	// Process items.
 	for _, item := range feed.Items {
-
-		// Skip items already known.
-		if _, ok := out.ItemMap[item.ID]; ok {
-			continue
-		}
 
 		next := new(Item)
 		next.Title = item.Title
@@ -70,26 +64,7 @@ func parseAtom(data []byte) (*Feed, error) {
 		}
 		next.Read = false
 
-		if next.ID == "" {
-			if debug {
-				fmt.Printf("[w] Item %q has no ID and will be ignored.\n", next.Title)
-				fmt.Printf("[w] %#v\n", item)
-			}
-			warnings = true
-			continue
-		}
-
-		if _, ok := out.ItemMap[next.ID]; ok {
-			if debug {
-				fmt.Printf("[w] Item %q has duplicate ID.\n", next.Title)
-				fmt.Printf("[w] %#v\n", next)
-			}
-			warnings = true
-			continue
-		}
-
 		out.Items = append(out.Items, next)
-		out.ItemMap[next.ID] = struct{}{}
 		out.Unread++
 	}
 

@@ -67,7 +67,6 @@ func parseRSS2(data []byte) (*Feed, error) {
 	}
 
 	out.Items = make([]*Item, 0, len(channel.Items))
-	out.ItemMap = make(map[string]struct{})
 
 	// Process items.
 	for _, item := range channel.Items {
@@ -81,11 +80,6 @@ func parseRSS2(data []byte) (*Feed, error) {
 				warnings = true
 				continue
 			}
-		}
-
-		// Skip items already known.
-		if _, ok := out.ItemMap[item.ID]; ok {
-			continue
 		}
 
 		next := new(Item)
@@ -116,7 +110,6 @@ func parseRSS2(data []byte) (*Feed, error) {
 		next.Read = false
 
 		out.Items = append(out.Items, next)
-		out.ItemMap[next.ID] = struct{}{}
 		out.Unread++
 	}
 

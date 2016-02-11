@@ -25,9 +25,9 @@ func main() {
 	if err != nil {
 		// handle error.
 	}
-	
+
 	// ... Some time later ...
-	
+
 	err = feed.Update()
 	if err != nil {
 		// handle error.
@@ -45,7 +45,6 @@ type Feed struct {
 	UpdateURL   string              // URL of the feed itself.
 	Image       *Image              // Feed icon.
 	Items       []*Item
-	ItemMap     map[string]struct{} // Used in checking whether an item has been seen before.
 	Refresh     time.Time           // Earliest time this feed should next be checked.
 	Unread      uint32              // Number of unread items. Used by aggregators.
 }
