@@ -81,7 +81,6 @@ func parseRSS2(data []byte) (*Feed, error) {
 				warnings = true
 				continue
 			}
-			item.ID = item.Link
 		}
 
 		// Skip items already known.
