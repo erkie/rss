@@ -49,6 +49,7 @@ func parseAtom(data []byte) (*Feed, error) {
 		next.Title = item.Title
 		next.Summary = item.Summary
 		next.Content = item.Content
+		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
 			if err != nil {

@@ -95,6 +95,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 		next.Content = item.Content
 		next.Category = item.Category
 		next.Link = item.Link
+		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
 			if err != nil {

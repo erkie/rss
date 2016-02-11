@@ -46,5 +46,9 @@ func parseTime(s string) (time.Time, error) {
 		}
 	}
 
-	return time.Unix(0, 0), nil
+	return defaultTime(), nil
+}
+
+func defaultTime() time.Time {
+	return time.Unix(0, 0)
 }
