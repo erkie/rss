@@ -79,9 +79,10 @@ func parseRSS1(data []byte) (*Feed, error) {
 
 		next := new(Item)
 		next.Title = item.Title
-		next.Summary = item.Description
-		next.Content = item.Content
-		next.Link = item.Link
+		next.Summary = strings.TrimSpace(item.Description)
+		next.Title = strings.TrimSpace(item.Title)
+		next.Content = strings.TrimSpace(item.Content)
+		next.Link = strings.TrimSpace(item.Link)
 		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
@@ -94,7 +95,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 				return nil, err
 			}
 		}
-		next.ID = item.ID
+		next.ID = strings.TrimSpace(item.ID)
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
 			for i := range item.Enclosures {

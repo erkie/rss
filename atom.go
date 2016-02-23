@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/xml"
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -19,11 +20,11 @@ func parseAtom(data []byte) (*Feed, error) {
 	}
 
 	out := new(Feed)
-	out.Title = feed.Title
-	out.Description = feed.Description
+	out.Title = strings.TrimSpace(feed.Title)
+	out.Description = strings.TrimSpace(feed.Description)
 	for _, link := range feed.Link {
 		if link.Rel == "alternate" || link.Rel == "" {
-			out.Link = link.Href
+			out.Link = strings.TrimSpace(link.Href)
 			break
 		}
 	}
@@ -40,9 +41,9 @@ func parseAtom(data []byte) (*Feed, error) {
 	for _, item := range feed.Items {
 
 		next := new(Item)
-		next.Title = item.Title
-		next.Summary = item.Summary
-		next.Content = item.Content
+		next.Title = strings.TrimSpace(item.Title)
+		next.Summary = strings.TrimSpace(item.Summary)
+		next.Content = strings.TrimSpace(item.Content)
 		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
@@ -50,13 +51,13 @@ func parseAtom(data []byte) (*Feed, error) {
 				return nil, err
 			}
 		}
-		next.ID = item.ID
+		next.ID = strings.TrimSpace(item.ID)
 		for _, link := range item.Links {
 			if link.Rel == "alternate" || link.Rel == "" {
 				next.Link = link.Href
 			} else {
 				next.Enclosures = append(next.Enclosures, &Enclosure{
-					Url:    link.Href,
+					Url:    strings.TrimSpace(link.Href),
 					Type:   link.Type,
 					Length: link.Length,
 				})
@@ -112,8 +113,8 @@ type atomLink struct {
 
 func (a *atomImage) Image() *Image {
 	out := new(Image)
-	out.Title = a.Title
-	out.Url = a.Url
+	out.Title = strings.TrimSpace(a.Title)
+	out.Url = strings.TrimSpace(a.Url)
 	out.Height = uint32(a.Height)
 	out.Width = uint32(a.Width)
 	return out

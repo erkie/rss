@@ -26,11 +26,11 @@ func parseRSS2(data []byte) (*Feed, error) {
 	channel := feed.Channel
 
 	out := new(Feed)
-	out.Title = channel.Title
-	out.Description = channel.Description
+	out.Title = strings.TrimSpace(channel.Title)
+	out.Description = strings.TrimSpace(channel.Description)
 	for _, link := range channel.Link {
 		if link.Rel == "" && link.Type == "" && link.Href == "" && link.Chardata != "" {
-			out.Link = link.Chardata
+			out.Link = strings.TrimSpace(link.Chardata)
 			break
 		}
 	}
@@ -83,11 +83,11 @@ func parseRSS2(data []byte) (*Feed, error) {
 		}
 
 		next := new(Item)
-		next.Title = item.Title
-		next.Summary = item.Description
-		next.Content = item.Content
-		next.Category = item.Category
-		next.Link = item.Link
+		next.Title = strings.TrimSpace(item.Title)
+		next.Summary = strings.TrimSpace(item.Description)
+		next.Content = strings.TrimSpace(item.Content)
+		next.Link = strings.TrimSpace(item.Link)
+
 		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
@@ -100,7 +100,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 				return nil, err
 			}
 		}
-		next.ID = item.ID
+		next.ID = strings.TrimSpace(item.ID)
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
 			for i := range item.Enclosures {
@@ -166,7 +166,7 @@ type rss2_0Enclosure struct {
 
 func (r *rss2_0Enclosure) Enclosure() *Enclosure {
 	out := new(Enclosure)
-	out.Url = r.Url
+	out.Url = strings.TrimSpace(r.Url)
 	out.Type = r.Type
 	out.Length = r.Length
 	return out
@@ -182,8 +182,8 @@ type rss2_0Image struct {
 
 func (i *rss2_0Image) Image() *Image {
 	out := new(Image)
-	out.Title = i.Title
-	out.Url = i.Url
+	out.Title = strings.TrimSpace(i.Title)
+	out.Url = strings.TrimSpace(i.Url)
 	out.Height = uint32(i.Height)
 	out.Width = uint32(i.Width)
 	return out
