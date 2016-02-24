@@ -14,6 +14,7 @@ import (
 
 // Parse RSS or Atom data.
 func Parse(data []byte) (*Feed, error) {
+	data = DiscardInvalidUTF8IfUTF8(data)
 
 	if strings.Contains(string(data), "<rss") {
 		if debug {
