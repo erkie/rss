@@ -19,12 +19,9 @@ func charsetReader(charset string, input io.Reader) (io.Reader, error) {
 	discarderReader := validUTF8Discarder{}
 	switch {
 	case isCharsetUTF8(charset):
-		fmt.Println("FSAIJFAISO")
 		return transform.NewReader(input, discarderReader), nil
 	default:
-		fmt.Println("FSAIJFAISO")
 		if decoder := mahonia.NewDecoder(charset); decoder != nil {
-			fmt.Println("FSAIJFAISOasdasdsa")
 			return transform.NewReader(decoder.NewReader(input), discarderReader), nil
 		}
 	}
