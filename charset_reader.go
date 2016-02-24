@@ -3,6 +3,7 @@ package rss
 import (
 	"bytes"
 	"errors"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"regexp"
@@ -16,14 +17,14 @@ import (
 
 func charsetReader(charset string, input io.Reader) (io.Reader, error) {
 	discarderReader := validUTF8Discarder{}
-
 	switch {
 	case isCharsetUTF8(charset):
+		fmt.Println("FSAIJFAISO")
 		return transform.NewReader(input, discarderReader), nil
-	case isCharsetISO88591(charset):
-		return transform.NewReader(newCharsetISO88591(input), discarderReader), nil
 	default:
+		fmt.Println("FSAIJFAISO")
 		if decoder := mahonia.NewDecoder(charset); decoder != nil {
+			fmt.Println("FSAIJFAISOasdasdsa")
 			return transform.NewReader(decoder.NewReader(input), discarderReader), nil
 		}
 	}
@@ -116,6 +117,7 @@ func DiscardInvalidUTF8IfUTF8(input []byte) []byte {
 	firstChunk := string(input[0:1024])
 
 	if hasUTF8.MatchString(firstChunk) {
+		fmt.Println("LOL")
 		reader := bytes.NewReader(input)
 		discarderReader := validUTF8Discarder{}
 
