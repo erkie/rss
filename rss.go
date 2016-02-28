@@ -89,8 +89,7 @@ type Feed struct {
 	UpdateURL   string // URL of the feed itself.
 	Image       *Image // Feed icon.
 	Items       []*Item
-	Refresh     time.Time // Earliest time this feed should next be checked.
-	Unread      uint32    // Number of unread items. Used by aggregators.
+	Unread      uint32 // Number of unread items. Used by aggregators.
 }
 
 func (f *Feed) String() string {
@@ -104,7 +103,6 @@ func (f *Feed) String() string {
 		fmt.Fprintf(w, "\xff\t\xffLink:\t%q\n", f.Link)
 		fmt.Fprintf(w, "\xff\t\xffUpdateURL:\t%q\n", f.UpdateURL)
 		fmt.Fprintf(w, "\xff\t\xffImage:\t%q (%s)\n", f.Image.Title, f.Image.Url)
-		fmt.Fprintf(w, "\xff\t\xffRefresh:\t%s\n", f.Refresh.Format(DATE))
 		fmt.Fprintf(w, "\xff\t\xffUnread:\t%d\n", f.Unread)
 		fmt.Fprintf(w, "\xff\t\xffItems:\t(%d) {\n", len(f.Items))
 		for _, item := range f.Items {
@@ -118,7 +116,6 @@ func (f *Feed) String() string {
 		fmt.Fprintf(w, "\t%q\n", f.Description)
 		fmt.Fprintf(w, "\t%q\n", f.Link)
 		fmt.Fprintf(w, "\t%s\n", f.Image)
-		fmt.Fprintf(w, "\tRefresh at %s\n", f.Refresh.Format(DATE))
 		fmt.Fprintf(w, "\tUnread: %d\n", f.Unread)
 		fmt.Fprintf(w, "\tItems:\n")
 		for _, item := range f.Items {

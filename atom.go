@@ -5,7 +5,6 @@ import (
 	"encoding/xml"
 	"fmt"
 	"strings"
-	"time"
 )
 
 func parseAtom(data []byte) (*Feed, error) {
@@ -29,7 +28,6 @@ func parseAtom(data []byte) (*Feed, error) {
 		}
 	}
 	out.Image = feed.Image.Image()
-	out.Refresh = time.Now().Add(10 * time.Minute)
 
 	if feed.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))

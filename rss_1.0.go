@@ -4,9 +4,7 @@ import (
 	"bytes"
 	"encoding/xml"
 	"fmt"
-	"sort"
 	"strings"
-	"time"
 )
 
 func parseRSS1(data []byte) (*Feed, error) {
@@ -30,32 +28,6 @@ func parseRSS1(data []byte) (*Feed, error) {
 	out.Description = channel.Description
 	out.Link = channel.Link
 	out.Image = channel.Image.Image()
-	if channel.MinsToLive != 0 {
-		sort.Ints(channel.SkipHours)
-		next := time.Now().Add(time.Duration(channel.MinsToLive) * time.Minute)
-		for _, hour := range channel.SkipHours {
-			if hour == next.Hour() {
-				next.Add(time.Duration(60-next.Minute()) * time.Minute)
-			}
-		}
-		trying := true
-		for trying {
-			trying = false
-			for _, day := range channel.SkipDays {
-				if strings.Title(day) == next.Weekday().String() {
-					next.Add(time.Duration(24-next.Hour()) * time.Hour)
-					trying = true
-					break
-				}
-			}
-		}
-
-		out.Refresh = next
-	}
-
-	if out.Refresh.IsZero() {
-		out.Refresh = time.Now().Add(10 * time.Minute)
-	}
 
 	if feed.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))

@@ -3,7 +3,6 @@ package rss
 import (
 	"bytes"
 	"errors"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"regexp"
@@ -111,10 +110,14 @@ func DiscardInvalidUTF8IfUTF8(input []byte) []byte {
 		hasUTF8 = regexp.MustCompile(`(?i)^.*<\?xml.*encoding=.*utf.?8`)
 	}
 
-	firstChunk := string(input[0:1024])
+	var firstChunk string
+	if len(input) > 1024 {
+		firstChunk = string(input[0:1024])
+	} else {
+		firstChunk = string(input)
+	}
 
 	if hasUTF8.MatchString(firstChunk) {
-		fmt.Println("LOL")
 		reader := bytes.NewReader(input)
 		discarderReader := validUTF8Discarder{}
 

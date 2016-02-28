@@ -45,7 +45,6 @@ type Feed struct {
 	UpdateURL   string              // URL of the feed itself.
 	Image       *Image              // Feed icon.
 	Items       []*Item
-	Refresh     time.Time           // Earliest time this feed should next be checked.
 	Unread      uint32              // Number of unread items. Used by aggregators.
 }
 
@@ -67,7 +66,6 @@ type Image struct {
 }
 ```
 
-The library does its best to follow the appropriate specifications and not to set the Refresh time
 too soon. It currently follows all update time management methods in the RSS 1.0, 2.0, and Atom 1.0
 specifications. If one is not provided, it defaults to 10 minute intervals. If you are having issues
 with feed providors dropping connections, please let me know and I can increase this default, or you
