@@ -45,7 +45,6 @@ type Feed struct {
 	UpdateURL   string              // URL of the feed itself.
 	Image       *Image              // Feed icon.
 	Items       []*Item
-	Unread      uint32              // Number of unread items. Used by aggregators.
 }
 
 type Item struct {

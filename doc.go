@@ -42,7 +42,6 @@ type Feed struct {
 	Image       *Image // Feed icon.
 	Items       []*Item
 	Refresh     time.Time           // Earliest time this feed should next be checked.
-	Unread      uint32              // Number of unread items. Used by aggregators.
 }
 
 type Item struct {

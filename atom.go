@@ -64,7 +64,6 @@ func parseAtom(data []byte) (*Feed, error) {
 		next.Read = false
 
 		out.Items = append(out.Items, next)
-		out.Unread++
 	}
 
 	if warnings && debug {

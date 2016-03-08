@@ -39,7 +39,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 	for _, item := range feed.Items {
 
 		if item.ID == "" {
-			if item.Link == "" {
+			if len(item.Links) == 0 {
 				if debug {
 					fmt.Printf("[w] Item %q has no ID or link and will be ignored.\n", item.Title)
 					fmt.Printf("[w] %#v\n", item)
@@ -50,11 +50,19 @@ func parseRSS1(data []byte) (*Feed, error) {
 		}
 
 		next := new(Item)
-		next.Title = item.Title
 		next.Summary = strings.TrimSpace(item.Description)
+
+		if item.Links != nil {
+			for _, link := range item.Links {
+				if link != "" {
+					next.Link = strings.TrimSpace(link)
+					break
+				}
+			}
+		}
+
 		next.Title = strings.TrimSpace(item.Title)
 		next.Content = strings.TrimSpace(item.Content)
-		next.Link = strings.TrimSpace(item.Link)
 		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
@@ -77,7 +85,6 @@ func parseRSS1(data []byte) (*Feed, error) {
 		next.Read = false
 
 		out.Items = append(out.Items, next)
-		out.Unread++
 	}
 
 	if warnings && debug {
@@ -109,7 +116,7 @@ type rss1_0Item struct {
 	Title       string            `xml:"title"`
 	Description string            `xml:"description"`
 	Content     string            `xml:"encoded"`
-	Link        string            `xml:"link"`
+	Links       []string          `xml:"link"`
 	PubDate     string            `xml:"pubDate"`
 	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
