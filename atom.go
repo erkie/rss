@@ -62,6 +62,9 @@ func parseAtom(data []byte) (*Feed, error) {
 			}
 		}
 		next.Read = false
+		if len(next.Link) == 0 && (strings.HasPrefix(next.ID, "http://") || strings.HasPrefix(next.ID, "https://")) {
+			next.Link = next.ID
+		}
 
 		out.Items = append(out.Items, next)
 	}
