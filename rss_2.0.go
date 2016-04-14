@@ -31,7 +31,6 @@ func parseRSS2(data []byte) (*Feed, error) {
 			break
 		}
 	}
-	out.Image = channel.Image.Image()
 
 	if channel.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
@@ -112,7 +111,6 @@ type rss2_0Channel struct {
 	Title       string       `xml:"title"`
 	Description string       `xml:"description"`
 	Link        []rss2_0Link `xml:"link"`
-	Image       rss2_0Image  `xml:"image"`
 	Items       []rss2_0Item `xml:"item"`
 	MinsToLive  int          `xml:"ttl"`
 	SkipHours   []int        `xml:"skipHours>hour"`
@@ -151,22 +149,5 @@ func (r *rss2_0Enclosure) Enclosure() *Enclosure {
 	out.Url = strings.TrimSpace(r.Url)
 	out.Type = r.Type
 	out.Length = r.Length
-	return out
-}
-
-type rss2_0Image struct {
-	XMLName xml.Name `xml:"image"`
-	Title   string   `xml:"title"`
-	Url     string   `xml:"url"`
-	Height  int      `xml:"height"`
-	Width   int      `xml:"width"`
-}
-
-func (i *rss2_0Image) Image() *Image {
-	out := new(Image)
-	out.Title = strings.TrimSpace(i.Title)
-	out.Url = strings.TrimSpace(i.Url)
-	out.Height = uint32(i.Height)
-	out.Width = uint32(i.Width)
 	return out
 }

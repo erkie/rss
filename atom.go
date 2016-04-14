@@ -27,7 +27,6 @@ func parseAtom(data []byte) (*Feed, error) {
 			break
 		}
 	}
-	out.Image = feed.Image.Image()
 
 	if feed.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
@@ -81,7 +80,6 @@ type atomFeed struct {
 	Title       string     `xml:"title"`
 	Description string     `xml:"subtitle"`
 	Link        []atomLink `xml:"link"`
-	Image       atomImage  `xml:"image"`
 	Items       []atomItem `xml:"entry"`
 	Updated     string     `xml:"updated"`
 }
@@ -96,26 +94,9 @@ type atomItem struct {
 	ID      string     `xml:"id"`
 }
 
-type atomImage struct {
-	XMLName xml.Name `xml:"image"`
-	Title   string   `xml:"title"`
-	Url     string   `xml:"url"`
-	Height  int      `xml:"height"`
-	Width   int      `xml:"width"`
-}
-
 type atomLink struct {
 	Href   string `xml:"href,attr"`
 	Rel    string `xml:"rel,attr"`
 	Type   string `xml:"type,attr"`
 	Length int    `xml:"length,attr"`
-}
-
-func (a *atomImage) Image() *Image {
-	out := new(Image)
-	out.Title = strings.TrimSpace(a.Title)
-	out.Url = strings.TrimSpace(a.Url)
-	out.Height = uint32(a.Height)
-	out.Width = uint32(a.Width)
-	return out
 }

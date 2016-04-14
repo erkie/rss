@@ -17,7 +17,7 @@ func TestParseTimeUsingOnlyDefaultLayouts(t *testing.T) {
 	for _, layout := range originalLayouts {
 		s := timeVal.Format(layout)
 		if tv, err := parseTime(s); err != nil || !tv.Equal(timeVal) {
-			t.Error("expected no err and times to equal, got err %v and time value %v", err, tv)
+			t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
 		}
 	}
 
@@ -38,7 +38,7 @@ func TestParseTimeUsingCustomLayoutsPrepended(t *testing.T) {
 	TimeLayouts = append([]string{customLayout}, originalLayouts...)
 	custom := timeVal.Format(customLayout)
 	if tv, err := parseTime(custom); err != nil || !tv.Equal(timeVal) {
-		t.Error("expected no err and times to equal, got err %v and time value %v", err, tv)
+		t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
 	}
 	TimeLayouts = originalLayouts
 }
@@ -47,7 +47,7 @@ func TestParseTimeUsingCustomLayoutsAppended(t *testing.T) {
 	TimeLayouts = append(originalLayouts, customLayout)
 	custom := timeVal.Format(customLayout)
 	if tv, err := parseTime(custom); err != nil || !tv.Equal(timeVal) {
-		t.Error("expected no err and times to equal, got err %v and time value %v", err, tv)
+		t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
 	}
 	TimeLayouts = originalLayouts
 }

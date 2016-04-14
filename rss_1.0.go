@@ -27,7 +27,6 @@ func parseRSS1(data []byte) (*Feed, error) {
 	out.Title = channel.Title
 	out.Description = channel.Description
 	out.Link = channel.Link
-	out.Image = channel.Image.Image()
 
 	if feed.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
@@ -104,14 +103,13 @@ type rss1_0Feed struct {
 }
 
 type rss1_0Channel struct {
-	XMLName     xml.Name    `xml:"channel"`
-	Title       string      `xml:"title"`
-	Description string      `xml:"description"`
-	Link        string      `xml:"link"`
-	Image       rss1_0Image `xml:"image"`
-	MinsToLive  int         `xml:"ttl"`
-	SkipHours   []int       `xml:"skipHours>hour"`
-	SkipDays    []string    `xml:"skipDays>day"`
+	XMLName     xml.Name `xml:"channel"`
+	Title       string   `xml:"title"`
+	Description string   `xml:"description"`
+	Link        string   `xml:"link"`
+	MinsToLive  int      `xml:"ttl"`
+	SkipHours   []int    `xml:"skipHours>hour"`
+	SkipDays    []string `xml:"skipDays>day"`
 }
 
 type rss1_0Item struct {
@@ -138,22 +136,5 @@ func (r *rss1_0Enclosure) Enclosure() *Enclosure {
 	out.Url = r.Url
 	out.Type = r.Type
 	out.Length = r.Length
-	return out
-}
-
-type rss1_0Image struct {
-	XMLName xml.Name `xml:"image"`
-	Title   string   `xml:"title"`
-	Url     string   `xml:"url"`
-	Height  int      `xml:"height"`
-	Width   int      `xml:"width"`
-}
-
-func (i *rss1_0Image) Image() *Image {
-	out := new(Image)
-	out.Title = i.Title
-	out.Url = i.Url
-	out.Height = uint32(i.Height)
-	out.Width = uint32(i.Width)
 	return out
 }

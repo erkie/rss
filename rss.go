@@ -16,6 +16,9 @@ import (
 func Parse(data []byte) (*Feed, error) {
 	data = DiscardInvalidUTF8IfUTF8(data)
 
+	var feed *Feed
+	var err error
+
 	if strings.Contains(string(data), "<rss") {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 2.0")
@@ -33,8 +36,6 @@ func Parse(data []byte) (*Feed, error) {
 		return parseAtom(data)
 	}
 }
-
-type FetchFunc func(url string) (resp *http.Response, err error)
 
 var DefaultFetchFunc = func(url string) (resp *http.Response, err error) {
 	client := http.DefaultClient
@@ -87,7 +88,6 @@ type Feed struct {
 	Description string
 	Link        string // Link to the creator's website.
 	UpdateURL   string // URL of the feed itself.
-	Image       *Image // Feed icon.
 	Items       []*Item
 }
 
@@ -101,7 +101,6 @@ func (f *Feed) String() string {
 		fmt.Fprintf(w, "\xff\t\xffDescription:\t%q\n", f.Description)
 		fmt.Fprintf(w, "\xff\t\xffLink:\t%q\n", f.Link)
 		fmt.Fprintf(w, "\xff\t\xffUpdateURL:\t%q\n", f.UpdateURL)
-		fmt.Fprintf(w, "\xff\t\xffImage:\t%q (%s)\n", f.Image.Title, f.Image.Url)
 		fmt.Fprintf(w, "\xff\t\xffItems:\t(%d) {\n", len(f.Items))
 		for _, item := range f.Items {
 			fmt.Fprintf(w, "%s\n", item.Format(2))
@@ -113,7 +112,6 @@ func (f *Feed) String() string {
 		fmt.Fprintf(w, "Feed %q\n", f.Title)
 		fmt.Fprintf(w, "\t%q\n", f.Description)
 		fmt.Fprintf(w, "\t%q\n", f.Link)
-		fmt.Fprintf(w, "\t%s\n", f.Image)
 		fmt.Fprintf(w, "\tItems:\n")
 		for _, item := range f.Items {
 			fmt.Fprintf(w, "\t%s\n", item.Format(2))
@@ -185,28 +183,4 @@ func (e *Enclosure) Get() (io.ReadCloser, error) {
 	}
 
 	return res.Body, nil
-}
-
-type Image struct {
-	Title  string `json:"title"`
-	Url    string `json:"url"`
-	Height uint32 `json:"height"`
-	Width  uint32 `json:"width"`
-}
-
-func (i *Image) Get() (io.ReadCloser, error) {
-	if i == nil || i.Url == "" {
-		return nil, errors.New("No image")
-	}
-
-	res, err := http.Get(i.Url)
-	if err != nil {
-		return nil, err
-	}
-
-	return res.Body, nil
-}
-
-func (i *Image) String() string {
-	return fmt.Sprintf("Image %q", i.Title)
 }
