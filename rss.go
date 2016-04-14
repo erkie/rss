@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"strings"
 	"text/tabwriter"
@@ -23,62 +22,26 @@ func Parse(data []byte) (*Feed, error) {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 2.0")
 		}
-		return parseRSS2(data)
+		feed, err = parseRSS2(data)
 	} else if strings.Contains(string(data), "xmlns=\"http://purl.org/rss/1.0/\"") {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 1.0")
 		}
-		return parseRSS1(data)
+		feed, err = parseRSS1(data)
 	} else {
 		if debug {
 			fmt.Println("[i] Parsing as Atom")
 		}
-		return parseAtom(data)
+		feed, err = parseAtom(data)
 	}
-}
 
-var DefaultFetchFunc = func(url string) (resp *http.Response, err error) {
-	client := http.DefaultClient
-	return client.Get(url)
-}
-
-// Fetch downloads and parses the RSS feed at the given URL
-func Fetch(url string) (*Feed, error) {
-	return FetchByFunc(DefaultFetchFunc, url)
-}
-
-func FetchByClient(url string, client *http.Client) (*Feed, error) {
-	fetchFunc := func(url string) (resp *http.Response, err error) {
-		return client.Get(url)
-	}
-	return FetchByFunc(fetchFunc, url)
-}
-
-func FetchByFunc(fetchFunc FetchFunc, url string) (*Feed, error) {
-	resp, err := fetchFunc(url)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-
-	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
 	}
 
-	out, err := Parse(body)
-	if err != nil {
-		return nil, err
-	}
+	normalizeURLsInFeed(feed)
 
-	if out.Link == "" {
-		out.Link = url
-	}
-
-	out.UpdateURL = url
-	out.FetchFunc = fetchFunc
-
-	return out, nil
+	return feed, err
 }
 
 // Feed is the top-level structure.
