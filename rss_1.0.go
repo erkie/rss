@@ -62,6 +62,15 @@ func parseRSS1(data []byte) (*Feed, error) {
 
 		next.Title = strings.TrimSpace(item.Title)
 		next.Content = strings.TrimSpace(item.Content)
+
+		if next.Content == "" && len(item.Media) > 0 {
+			for _, media := range item.Media {
+				if media.Description != "" {
+					next.Content = media.Description
+				}
+			}
+		}
+
 		next.Date = defaultTime()
 		if item.Date != "" {
 			next.Date, err = parseTime(item.Date)
@@ -113,15 +122,15 @@ type rss1_0Channel struct {
 }
 
 type rss1_0Item struct {
-	XMLName     xml.Name          `xml:"item"`
-	Title       string            `xml:"title"`
-	Description string            `xml:"description"`
-	Content     string            `xml:"encoded"`
-	Links       []string          `xml:"link"`
-	PubDate     string            `xml:"pubDate"`
-	Date        string            `xml:"date"`
-	ID          string            `xml:"guid"`
-	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
+	XMLName    xml.Name          `xml:"item"`
+	Title      string            `xml:"title"`
+	Content    string            `xml:"description"`
+	Links      []string          `xml:"link"`
+	PubDate    string            `xml:"pubDate"`
+	Date       string            `xml:"date"`
+	ID         string            `xml:"guid"`
+	Enclosures []rss1_0Enclosure `xml:"enclosure"`
+	Media      []rss1_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
 }
 
 type rss1_0Enclosure struct {
@@ -129,6 +138,10 @@ type rss1_0Enclosure struct {
 	Url     string   `xml:"resource,attr"`
 	Type    string   `xml:"type,attr"`
 	Length  int      `xml:"length,attr"`
+}
+
+type rss1_0Media struct {
+	Description string `xml:"description"`
 }
 
 func (r *rss1_0Enclosure) Enclosure() *Enclosure {
