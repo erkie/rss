@@ -21,7 +21,7 @@ func parseAtom(data []byte) (*Feed, error) {
 	out := new(Feed)
 	out.Title = strings.TrimSpace(feed.Title)
 	out.Description = strings.TrimSpace(feed.Description)
-	for _, link := range feed.Link {
+	for _, link := range feed.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
 			out.Link = strings.TrimSpace(link.Href)
 			break
@@ -88,7 +88,7 @@ type atomFeed struct {
 	XMLName     xml.Name   `xml:"feed"`
 	Title       string     `xml:"title"`
 	Description string     `xml:"subtitle"`
-	Link        []atomLink `xml:"link"`
+	Links       []atomLink `xml:"link"`
 	Items       []atomItem `xml:"entry"`
 	Updated     string     `xml:"updated"`
 }
