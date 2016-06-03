@@ -25,9 +25,13 @@ func parseRSS2(data []byte) (*Feed, error) {
 	out := new(Feed)
 	out.Title = strings.TrimSpace(channel.Title)
 	out.Description = strings.TrimSpace(channel.Description)
-	for _, link := range channel.Link {
-		if link.Rel == "" && link.Type == "" && link.Href == "" && link.Chardata != "" {
-			out.Link = strings.TrimSpace(link.Chardata)
+	for _, link := range channel.Links {
+		if link.Rel == "alternate" || link.Rel == "" {
+			if link.Href == "" && link.Contents != "" {
+				out.Link = strings.TrimSpace(link.Contents)
+			} else {
+				out.Link = strings.TrimSpace(link.Href)
+			}
 			break
 		}
 	}
@@ -118,7 +122,7 @@ type rss2_0Channel struct {
 	XMLName     xml.Name     `xml:"channel"`
 	Title       string       `xml:"title"`
 	Description string       `xml:"description"`
-	Link        []rss2_0Link `xml:"link"`
+	Links       []rss2_0Link `xml:"link"`
 	Items       []rss2_0Item `xml:"item"`
 	MinsToLive  int          `xml:"ttl"`
 	SkipHours   []int        `xml:"skipHours>hour"`
@@ -133,7 +137,6 @@ type rss2_0Link struct {
 }
 
 type rss2_0Item struct {
-<<<<<<< HEAD
 	XMLName     xml.Name          `xml:"item"`
 	Title       string            `xml:"title"`
 	Description string            `xml:"description"`
@@ -156,6 +159,14 @@ type rss2_0Enclosure struct {
 
 type rss2_0Media struct {
 	Description string `xml:"description"`
+}
+
+type rss2_0Link struct {
+	Href     string `xml:"href,attr"`
+	Rel      string `xml:"rel,attr"`
+	Type     string `xml:"type,attr"`
+	Length   int    `xml:"length,attr"`
+	Contents string `xml:",chardata"`
 }
 
 func (r *rss2_0Enclosure) Enclosure() *Enclosure {

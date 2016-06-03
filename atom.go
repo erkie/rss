@@ -23,7 +23,15 @@ func parseAtom(data []byte) (*Feed, error) {
 	out.Description = strings.TrimSpace(feed.Description)
 	for _, link := range feed.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
+<<<<<<< HEAD
 			out.Link = strings.TrimSpace(link.Href)
+=======
+			if link.Href == "" && link.Contents != "" {
+				out.Link = strings.TrimSpace(link.Contents)
+			} else {
+				out.Link = strings.TrimSpace(link.Href)
+			}
+>>>>>>> Support multiple link elements
 			break
 		}
 	}
@@ -105,10 +113,11 @@ type atomItem struct {
 }
 
 type atomLink struct {
-	Href   string `xml:"href,attr"`
-	Rel    string `xml:"rel,attr"`
-	Type   string `xml:"type,attr"`
-	Length int    `xml:"length,attr"`
+	Href     string `xml:"href,attr"`
+	Rel      string `xml:"rel,attr"`
+	Type     string `xml:"type,attr"`
+	Length   int    `xml:"length,attr"`
+	Contents string `xml:",chardata"`
 }
 
 type atomMedia struct {

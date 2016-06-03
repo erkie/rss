@@ -26,7 +26,17 @@ func parseRSS1(data []byte) (*Feed, error) {
 	out := new(Feed)
 	out.Title = channel.Title
 	out.Description = channel.Description
-	out.Link = channel.Link
+
+	for _, link := range channel.Links {
+		if link.Rel == "alternate" || link.Rel == "" {
+			if link.Href == "" && link.Contents != "" {
+				out.Link = strings.TrimSpace(link.Contents)
+			} else {
+				out.Link = strings.TrimSpace(link.Href)
+			}
+			break
+		}
+	}
 
 	if feed.Items == nil {
 		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
@@ -112,13 +122,13 @@ type rss1_0Feed struct {
 }
 
 type rss1_0Channel struct {
-	XMLName     xml.Name `xml:"channel"`
-	Title       string   `xml:"title"`
-	Description string   `xml:"description"`
-	Link        string   `xml:"link"`
-	MinsToLive  int      `xml:"ttl"`
-	SkipHours   []int    `xml:"skipHours>hour"`
-	SkipDays    []string `xml:"skipDays>day"`
+	XMLName     xml.Name     `xml:"channel"`
+	Title       string       `xml:"title"`
+	Description string       `xml:"description"`
+	Links       []rss1_0Link `xml:"link"`
+	MinsToLive  int          `xml:"ttl"`
+	SkipHours   []int        `xml:"skipHours>hour"`
+	SkipDays    []string     `xml:"skipDays>day"`
 }
 
 type rss1_0Item struct {
@@ -142,6 +152,14 @@ type rss1_0Enclosure struct {
 
 type rss1_0Media struct {
 	Description string `xml:"description"`
+}
+
+type rss1_0Link struct {
+	Href     string `xml:"href,attr"`
+	Rel      string `xml:"rel,attr"`
+	Type     string `xml:"type,attr"`
+	Length   int    `xml:"length,attr"`
+	Contents string `xml:",chardata"`
 }
 
 func (r *rss1_0Enclosure) Enclosure() *Enclosure {
