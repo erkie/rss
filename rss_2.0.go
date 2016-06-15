@@ -37,7 +37,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 	}
 
 	if channel.Items == nil {
-		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
+		channel.Items = make([]rss2_0Item, 0)
 	}
 
 	out.Items = make([]*Item, 0, len(channel.Items))

@@ -37,7 +37,7 @@ func parseAtom(data []byte) (*Feed, error) {
 	}
 
 	if feed.Items == nil {
-		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
+		feed.Items = make([]atomItem, 0)
 	}
 
 	out.Items = make([]*Item, 0, len(feed.Items))
