@@ -129,13 +129,6 @@ type rss2_0Channel struct {
 	SkipDays    []string     `xml:"skipDays>day"`
 }
 
-type rss2_0Link struct {
-	Rel      string `xml:"rel,attr"`
-	Href     string `xml:"href,attr"`
-	Type     string `xml:"type,attr"`
-	Chardata string `xml:",chardata"`
-}
-
 type rss2_0Item struct {
 	XMLName     xml.Name          `xml:"item"`
 	Title       string            `xml:"title"`

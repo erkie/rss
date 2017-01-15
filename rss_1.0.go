@@ -132,15 +132,16 @@ type rss1_0Channel struct {
 }
 
 type rss1_0Item struct {
-	XMLName    xml.Name          `xml:"item"`
-	Title      string            `xml:"title"`
-	Content    string            `xml:"description"`
-	Links      []string          `xml:"link"`
-	PubDate    string            `xml:"pubDate"`
-	Date       string            `xml:"date"`
-	ID         string            `xml:"guid"`
-	Enclosures []rss1_0Enclosure `xml:"enclosure"`
-	Media      []rss1_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
+	XMLName     xml.Name          `xml:"item"`
+	Title       string            `xml:"title"`
+	Description string            `xml:"description"`
+	Content     string            `xml:"encoded"`
+	Links       []string          `xml:"link"`
+	PubDate     string            `xml:"pubDate"`
+	Date        string            `xml:"date"`
+	ID          string            `xml:"guid"`
+	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
+	Media       []rss1_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
 }
 
 type rss1_0Enclosure struct {

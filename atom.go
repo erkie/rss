@@ -23,21 +23,17 @@ func parseAtom(data []byte) (*Feed, error) {
 	out.Description = strings.TrimSpace(feed.Description)
 	for _, link := range feed.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
-<<<<<<< HEAD
-			out.Link = strings.TrimSpace(link.Href)
-=======
 			if link.Href == "" && link.Contents != "" {
 				out.Link = strings.TrimSpace(link.Contents)
 			} else {
 				out.Link = strings.TrimSpace(link.Href)
 			}
->>>>>>> Support multiple link elements
 			break
 		}
 	}
 
 	if feed.Items == nil {
-		feed.Items = make([]atomItem, 0)
+		return nil, fmt.Errorf("Error: no feeds found in %q.", string(data))
 	}
 
 	out.Items = make([]*Item, 0, len(feed.Items))

@@ -18,16 +18,16 @@ func Parse(data []byte) (*Feed, error) {
 	var feed *Feed
 	var err error
 
-	if strings.Contains(string(data), "<rss") {
-		if debug {
-			fmt.Println("[i] Parsing as RSS 2.0")
-		}
-		feed, err = parseRSS2(data)
-	} else if strings.Contains(string(data), "xmlns=\"http://purl.org/rss/1.0/\"") {
+	if strings.Contains(string(data), "=\"http://purl.org/rss/1.0/\"") {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 1.0")
 		}
 		feed, err = parseRSS1(data)
+	} else if strings.Contains(string(data), "<rss") {
+		if debug {
+			fmt.Println("[i] Parsing as RSS 2.0")
+		}
+		feed, err = parseRSS2(data)
 	} else {
 		if debug {
 			fmt.Println("[i] Parsing as Atom")
