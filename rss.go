@@ -132,7 +132,7 @@ func (i *Item) Format(indent int) string {
 type Enclosure struct {
 	Url    string `json:"url"`
 	Type   string `json:"type"`
-	Length int    `json:"length"`
+	Length string `json:"length"`
 }
 
 func (e *Enclosure) Get() (io.ReadCloser, error) {

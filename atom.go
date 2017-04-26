@@ -112,7 +112,7 @@ type atomLink struct {
 	Href     string `xml:"href,attr"`
 	Rel      string `xml:"rel,attr"`
 	Type     string `xml:"type,attr"`
-	Length   int    `xml:"length,attr"`
+	Length   string `xml:"length,attr"`
 	Contents string `xml:",chardata"`
 }
 

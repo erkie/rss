@@ -124,8 +124,8 @@ type rss2_0Channel struct {
 	Description string       `xml:"description"`
 	Links       []rss2_0Link `xml:"link"`
 	Items       []rss2_0Item `xml:"item"`
-	MinsToLive  int          `xml:"ttl"`
-	SkipHours   []int        `xml:"skipHours>hour"`
+	MinsToLive  string       `xml:"ttl"`
+	SkipHours   []string     `xml:"skipHours>hour"`
 	SkipDays    []string     `xml:"skipDays>day"`
 }
 
@@ -147,7 +147,7 @@ type rss2_0Enclosure struct {
 	XMLName xml.Name `xml:"enclosure"`
 	Url     string   `xml:"url,attr"`
 	Type    string   `xml:"type,attr"`
-	Length  int      `xml:"length,attr"`
+	Length  string   `xml:"length,attr"`
 }
 
 type rss2_0Media struct {
@@ -158,7 +158,7 @@ type rss2_0Link struct {
 	Href     string `xml:"href,attr"`
 	Rel      string `xml:"rel,attr"`
 	Type     string `xml:"type,attr"`
-	Length   int    `xml:"length,attr"`
+	Length   string `xml:"length,attr"`
 	Contents string `xml:",chardata"`
 }
 
