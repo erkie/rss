@@ -12,7 +12,7 @@ func parseAtom(data []byte) (*Feed, error) {
 	feed := atomFeed{}
 	p := xml.NewDecoder(bytes.NewReader(data))
 	p.Strict = false
-	p.CharsetReader = charsetReader
+	p.CharsetReader = CharsetReader
 	err := p.Decode(&feed)
 	if err != nil {
 		return nil, err

@@ -14,7 +14,8 @@ import (
 	"github.com/axgle/mahonia"
 )
 
-func charsetReader(charset string, input io.Reader) (io.Reader, error) {
+// CharsetReader is a lenient charset reader good for web inputs
+func CharsetReader(charset string, input io.Reader) (io.Reader, error) {
 	discarderReader := validUTF8Discarder{}
 	switch {
 	case isCharsetUTF8(charset):
