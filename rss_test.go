@@ -22,7 +22,7 @@ func TestParseTitle(t *testing.T) {
 			t.Fatalf("Reading %s: %v", test, err)
 		}
 
-		feed, err := Parse(data)
+		feed, err := Parse(data, nil)
 		if err != nil {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}
@@ -35,10 +35,10 @@ func TestParseTitle(t *testing.T) {
 
 func TestEnclosure(t *testing.T) {
 	tests := map[string]Enclosure{
-		"rss_1.0":   Enclosure{Url: "http://foo.bar/baz.mp3", Type: "audio/mpeg", Length: 65535},
-		"rss_2.0":   Enclosure{Url: "http://example.com/file.mp3", Type: "audio/mpeg", Length: 65535},
-		"rss_2.0-1": Enclosure{Url: "http://gdb.voanews.com/6C49CA6D-C18D-414D-8A51-2B7042A81010_cx0_cy29_cw0_w800_h450.jpg", Type: "image/jpeg", Length: 3123},
-		"atom_1.0":  Enclosure{Url: "http://example.org/audio.mp3", Type: "audio/mpeg", Length: 1234},
+		"rss_1.0":   Enclosure{Url: "http://foo.bar/baz.mp3", Type: "audio/mpeg", Length: "65535"},
+		"rss_2.0":   Enclosure{Url: "http://example.com/file.mp3", Type: "audio/mpeg", Length: "65535"},
+		"rss_2.0-1": Enclosure{Url: "http://gdb.voanews.com/6C49CA6D-C18D-414D-8A51-2B7042A81010_cx0_cy29_cw0_w800_h450.jpg", Type: "image/jpeg", Length: "3123"},
+		"atom_1.0":  Enclosure{Url: "http://example.org/audio.mp3", Type: "audio/mpeg", Length: "1234"},
 	}
 
 	for test, want := range tests {
@@ -47,7 +47,7 @@ func TestEnclosure(t *testing.T) {
 			t.Fatalf("Reading %s: %v", test, err)
 		}
 
-		feed, err := Parse(data)
+		feed, err := Parse(data, nil)
 		if err != nil {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}

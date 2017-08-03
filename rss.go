@@ -12,8 +12,8 @@ import (
 )
 
 // Parse RSS or Atom data.
-func Parse(data []byte) (*Feed, error) {
-	data = DiscardInvalidUTF8IfUTF8(data)
+func Parse(data []byte, responseHeaders http.Header) (*Feed, error) {
+	data = DiscardInvalidUTF8IfUTF8(data, responseHeaders)
 
 	var feed *Feed
 	var err error
