@@ -129,8 +129,10 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
 		if charsetFromHeaders != "" && charsetFromHeaders != "utf-8" && charsetFromHeaders != "utf8" {
 			dec := mahonia.NewDecoder(charsetFromHeaders)
-			convertedToUtf8 := dec.ConvertString(string(input))
-			input = []byte(convertedToUtf8)
+			if dec != nil {
+				convertedToUtf8 := dec.ConvertString(string(input))
+				input = []byte(convertedToUtf8)
+			}
 		}
 
 		reader := bytes.NewReader(input)
