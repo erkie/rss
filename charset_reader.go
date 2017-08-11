@@ -3,7 +3,6 @@ package rss
 import (
 	"bytes"
 	"errors"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -146,7 +145,6 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		}
 		return value
 	}
-	fmt.Println(string(input))
 	return input
 }
 
