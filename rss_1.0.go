@@ -24,6 +24,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 	channel := feed.Channel
 
 	out := new(Feed)
+	out.Type = "rss1.0"
 	out.Title = channel.Title
 	out.Description = channel.Description
 

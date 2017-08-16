@@ -46,7 +46,7 @@ func Parse(data []byte, responseHeaders http.Header) (*Feed, error) {
 
 // Feed is the top-level structure.
 type Feed struct {
-	Nickname    string // This is not set by the package, but could be helpful.
+	Type        string
 	Title       string
 	Description string
 	Link        string // Link to the creator's website.
@@ -59,7 +59,7 @@ func (f *Feed) String() string {
 	if debug {
 		w := tabwriter.NewWriter(buf, 0, 8, 0, '\t', tabwriter.StripEscape)
 		fmt.Fprintf(w, "Feed {\n")
-		fmt.Fprintf(w, "\xff\t\xffNickname:\t%q\n", f.Nickname)
+		fmt.Fprintf(w, "\xff\t\xffType:\t%q\n", f.Type)
 		fmt.Fprintf(w, "\xff\t\xffTitle:\t%q\n", f.Title)
 		fmt.Fprintf(w, "\xff\t\xffDescription:\t%q\n", f.Description)
 		fmt.Fprintf(w, "\xff\t\xffLink:\t%q\n", f.Link)

@@ -19,6 +19,7 @@ func parseAtom(data []byte) (*Feed, error) {
 	}
 
 	out := new(Feed)
+	out.Type = "atom"
 	out.Title = strings.TrimSpace(feed.Title)
 	out.Description = strings.TrimSpace(feed.Description)
 	for _, link := range feed.Links {

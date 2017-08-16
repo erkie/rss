@@ -23,6 +23,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 	channel := feed.Channel
 
 	out := new(Feed)
+	out.Type = "rss2.0"
 	out.Title = strings.TrimSpace(channel.Title)
 	out.Description = strings.TrimSpace(channel.Description)
 	for _, link := range channel.Links {
