@@ -85,6 +85,14 @@ func parseAtom(data []byte) (*Feed, error) {
 		out.Items = append(out.Items, next)
 	}
 
+	out.Links = make([]*Link, len(feed.Links))
+	for i, link := range feed.Links {
+		out.Links[i] = &Link{
+			URL: link.Href,
+			Rel: link.Rel,
+		}
+	}
+
 	if warnings && debug {
 		fmt.Printf("[i] Encountered warnings:\n%s\n", data)
 	}

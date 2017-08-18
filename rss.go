@@ -52,6 +52,13 @@ type Feed struct {
 	Link        string // Link to the creator's website.
 	UpdateURL   string // URL of the feed itself.
 	Items       []*Item
+	Links       []*Link
+}
+
+// Links as defined inside RSS feeds that can contain various information
+type Link struct {
+	URL string
+	Rel string
 }
 
 func (f *Feed) String() string {

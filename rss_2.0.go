@@ -107,6 +107,14 @@ func parseRSS2(data []byte) (*Feed, error) {
 		out.Items = append(out.Items, next)
 	}
 
+	out.Links = make([]*Link, len(channel.Links))
+	for i, link := range channel.Links {
+		out.Links[i] = &Link{
+			URL: link.Href,
+			Rel: link.Rel,
+		}
+	}
+
 	if warnings && debug {
 		fmt.Printf("[i] Encountered warnings:\n%s\n", data)
 	}
