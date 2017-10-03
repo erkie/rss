@@ -2,6 +2,7 @@ package rss
 
 import (
 	"net/url"
+	"regexp"
 	"strings"
 )
 
@@ -22,7 +23,8 @@ func normalizeURL(link string, base string) string {
 	}
 	// Find other protocols. Maybe we should limit to certain allowed protocol. This being the web HTTP makes sense...
 	pieces := strings.SplitN(link, ":", 2)
-	if len(pieces) == 2 && strings.HasPrefix(pieces[1], "//") {
+
+	if len(pieces) == 2 && (pieces[0] == "http" || pieces[0] == "https" || isValidScheme(pieces[0])) {
 		return link
 	}
 	// Parse base url and use that for link
@@ -53,4 +55,15 @@ func normalizeURL(link string, base string) string {
 	}
 
 	return builtURL.String()
+}
+
+var schemeRegex *regexp.Regexp
+
+func isValidScheme(s string) bool {
+	if schemeRegex == nil {
+		schemeRegex = regexp.MustCompile("^[A-Za-z][A-Za-z0-9+-.]+$")
+	}
+
+	// scheme = alpha *( alpha | digit | "+" | "-" | "." )
+	return schemeRegex.MatchString(s)
 }
