@@ -119,13 +119,14 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		firstChunk = string(input)
 	}
 
-	if hasUTF8.MatchString(firstChunk) {
+	charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
+
+	if hasUTF8.MatchString(firstChunk) || (charsetFromHeaders != "" && charsetFromHeaders != "utf-8" && charsetFromHeaders != "utf8") {
 		// Some feeds respond with a <?xml encoding=utf8 even though their server
 		// indicates another charset. Here we act to fix that, by detecting if a
 		// header indicates something else. An example found in the wild:
 		//     Content-Type: application/rss+xml; Charset=ISO-8859-9
 		// this block would then convert ISO-8859-9 to UTF8 and then run the discarder on the input afterwards
-		charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
 		if charsetFromHeaders != "" && charsetFromHeaders != "utf-8" && charsetFromHeaders != "utf8" {
 			dec := mahonia.NewDecoder(charsetFromHeaders)
 			if dec != nil {
