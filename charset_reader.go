@@ -104,12 +104,17 @@ func isInCharacterRange(r rune) (inrange bool) {
 }
 
 var hasUTF8 *regexp.Regexp
+var hasEncodingAtAll *regexp.Regexp
 
 // DiscardInvalidUTF8IfUTF8 checks if input specifies itself as UTF8,
 // and then runs a check to discard XML-invalid characters (because go xml parser throws up if present)
 func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte {
 	if hasUTF8 == nil {
 		hasUTF8 = regexp.MustCompile(`(?i)^.*<\?xml.*encoding=.*utf.?8`)
+	}
+
+	if hasEncodingAtAll == nil {
+		hasEncodingAtAll = regexp.MustCompile(`(?i)^.*<\?xml.*encoding=.*`)
 	}
 
 	var firstChunk string
@@ -119,9 +124,9 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		firstChunk = string(input)
 	}
 
-	charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
+	if hasUTF8.MatchString(firstChunk) || !hasEncodingAtAll.MatchString(firstChunk) {
+		charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
 
-	if hasUTF8.MatchString(firstChunk) || (charsetFromHeaders != "" && charsetFromHeaders != "utf-8" && charsetFromHeaders != "utf8") {
 		// Some feeds respond with a <?xml encoding=utf8 even though their server
 		// indicates another charset. Here we act to fix that, by detecting if a
 		// header indicates something else. An example found in the wild:
