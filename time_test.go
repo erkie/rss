@@ -22,15 +22,15 @@ func TestParseTimeUsingOnlyDefaultLayouts(t *testing.T) {
 	}
 
 	// Negative cases
-	if _, err := parseTime(""); err == nil {
-		t.Error("expected err, got none")
+	if _, err := parseTime(""); err != nil {
+		t.Error("expected no err")
 	}
-	if _, err := parseTime("abc"); err == nil {
-		t.Error("expected err, got none")
+	if _, err := parseTime("abc"); err != nil {
+		t.Error("expected no err")
 	}
 	custom := timeVal.Format(customLayout)
-	if _, err := parseTime(custom); err == nil {
-		t.Error("expected err, got none")
+	if _, err := parseTime(custom); err != nil {
+		t.Error("expected no err")
 	}
 }
 
@@ -58,4 +58,3 @@ func TestParseWithTwoDigitYear(t *testing.T) {
 		t.Error("expected no err and year to be 2016, got err %v, and year %v", err, tv.Year())
 	}
 }
-
