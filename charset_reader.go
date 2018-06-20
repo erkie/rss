@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"regexp"
 	"strings"
+	"unicode/utf16"
 	"unicode/utf8"
 
 	"golang.org/x/text/transform"
@@ -18,8 +19,12 @@ import (
 // CharsetReader is a lenient charset reader good for web inputs
 func CharsetReader(charset string, input io.Reader) (io.Reader, error) {
 	discarderReader := validUTF8Discarder{}
+
 	switch {
 	case isCharsetUTF8(charset):
+		return transform.NewReader(input, discarderReader), nil
+	// Go works really weird with UTF-16
+	case isCharsetUTF16(charset):
 		return transform.NewReader(input, discarderReader), nil
 	default:
 		if decoder := mahonia.NewDecoder(charset); decoder != nil {
@@ -30,7 +35,7 @@ func CharsetReader(charset string, input io.Reader) (io.Reader, error) {
 	return nil, errors.New("CharsetReader: unexpected charset: " + charset)
 }
 
-func isCharset(charset string, names []string) bool {
+func compareStringToStrings(charset string, names []string) bool {
 	charset = strings.ToLower(charset)
 	for _, n := range names {
 		if charset == strings.ToLower(n) {
@@ -43,10 +48,19 @@ func isCharset(charset string, names []string) bool {
 func isCharsetUTF8(charset string) bool {
 	names := []string{
 		"UTF-8",
+		"UTF8",
 		// Default
 		"",
 	}
-	return isCharset(charset, names)
+	return compareStringToStrings(charset, names)
+}
+
+func isCharsetUTF16(charset string) bool {
+	names := []string{
+		"UTF-16",
+		"UTF16",
+	}
+	return compareStringToStrings(charset, names)
 }
 
 type validUTF8Discarder struct {
@@ -124,9 +138,20 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		firstChunk = string(input)
 	}
 
-	if hasUTF8.MatchString(firstChunk) || !hasEncodingAtAll.MatchString(firstChunk) {
-		charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
+	charsetFromHeaders := getCharsetFromHeaders(responseHeaders)
 
+	// UTF-16 handling in go seems a bit weird
+	// the Go XML parser wouldn't even attempt to decode unless we decode 16 first
+	// Hopefully a smarter person than me will see this, rage so hard at the stupidity of this fix
+	// and then open an issue letting me know how it's done
+	if isCharsetUTF16(charsetFromHeaders) {
+		utf16DecodedInput, err := decodeUTF16(input)
+		if err == nil {
+			return utf16DecodedInput
+		}
+	}
+
+	if hasUTF8.MatchString(firstChunk) || !hasEncodingAtAll.MatchString(firstChunk) {
 		// Some feeds respond with a <?xml encoding=utf8 even though their server
 		// indicates another charset. Here we act to fix that, by detecting if a
 		// header indicates something else. An example found in the wild:
@@ -170,4 +195,23 @@ func getCharsetFromHeaders(responseHeaders http.Header) string {
 	}
 
 	return ""
+}
+
+func decodeUTF16(b []byte) ([]byte, error) {
+	if len(b)%2 != 0 {
+		return nil, errors.New("Must have even number of chars")
+	}
+
+	u16s := make([]uint16, 1)
+	ret := &bytes.Buffer{}
+	b8buf := make([]byte, 4)
+	lb := len(b)
+	for i := 0; i < lb; i += 2 {
+		u16s[0] = uint16(b[i]) + (uint16(b[i+1]) << 8)
+		r := utf16.Decode(u16s)
+		n := utf8.EncodeRune(b8buf, r[0])
+		ret.Write(b8buf[:n])
+	}
+
+	return ret.Bytes(), nil
 }

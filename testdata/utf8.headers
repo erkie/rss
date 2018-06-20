@@ -1,0 +1,14 @@
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/rss+xml; charset=utf-8
+Date: Wed, 20 Jun 2018 12:48:43 GMT
+Etag: W/"31cf403c81cbcb1751e91994653d1ac5"
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx/1.12.2 + Phusion Passenger 5.2.3
+Status: 200 OK
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+X-Powered-By: Phusion Passenger 5.2.3
+X-Request-Id: 247eaa30-f1b3-4817-b327-2ff3997dab7d
+X-Runtime: 0.017431
+X-Xss-Protection: 1; mode=block

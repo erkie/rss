@@ -55,6 +55,6 @@ func TestParseTimeUsingCustomLayoutsAppended(t *testing.T) {
 func TestParseWithTwoDigitYear(t *testing.T) {
 	s := "Sun, 18 Dec 16 18:25:00 +0100"
 	if tv, err := parseTime(s); err != nil || tv.Year() != 2016 {
-		t.Error("expected no err and year to be 2016, got err %v, and year %v", err, tv.Year())
+		t.Errorf("expected no err and year to be 2016, got err %v, and year %d", err, tv.Year())
 	}
 }

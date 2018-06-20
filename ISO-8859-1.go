@@ -57,5 +57,5 @@ func isCharsetISO88591(charset string) bool {
 		"CP819",
 		"csISOLatin1",
 	}
-	return isCharset(charset, names)
+	return compareStringToStrings(charset, names)
 }
