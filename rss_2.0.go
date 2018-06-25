@@ -47,7 +47,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 	for _, item := range channel.Items {
 
 		if item.ID == "" {
-			if len(item.Links) == 0 {
+			if len(item.Links) == 0 && len(item.Description) == 0 && len(item.Content) == 0 {
 				if debug {
 					fmt.Printf("[w] Item %q has no ID or link and will be ignored.\n", item.Title)
 					fmt.Printf("[w] %#v\n", item)
