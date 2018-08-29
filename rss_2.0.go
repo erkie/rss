@@ -68,6 +68,10 @@ func parseRSS2(data []byte) (*Feed, error) {
 			}
 		}
 
+		if next.Link == "" && len(item.Href) > 0 {
+			next.Link = strings.TrimSpace(item.Href)
+		}
+
 		next.Title = strings.TrimSpace(item.Title)
 		next.Summary = strings.TrimSpace(item.Description)
 		next.Content = strings.TrimSpace(item.Content)
@@ -145,6 +149,7 @@ type rss2_0Item struct {
 	Content     string            `xml:"encoded"`
 	Category    string            `xml:"category"`
 	Links       []string          `xml:"link"`
+	Href        string            `xml:"href"` // Non-standard but found in the wild...
 	PubDate     string            `xml:"pubDate"`
 	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
