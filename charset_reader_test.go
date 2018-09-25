@@ -33,7 +33,7 @@ func TestParseUTF16LE(t *testing.T) {
 
 	for _, testCase := range testCases {
 		input, headers := parseTestCase(testCase.File)
-		feed, err := Parse(input, headers)
+		feed, err := Parse(input, headers, "")
 		if err != nil {
 			t.Error("Should not error on parsing", err)
 			continue

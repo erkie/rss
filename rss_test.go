@@ -23,7 +23,7 @@ func TestParseTitle(t *testing.T) {
 			t.Fatalf("Reading %s: %v", test, err)
 		}
 
-		feed, err := Parse(data, nil)
+		feed, err := Parse(data, nil, "")
 		if err != nil {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}
@@ -48,7 +48,7 @@ func TestEnclosure(t *testing.T) {
 			t.Fatalf("Reading %s: %v", test, err)
 		}
 
-		feed, err := Parse(data, nil)
+		feed, err := Parse(data, nil, "")
 		if err != nil {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}

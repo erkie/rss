@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-func normalizeURLsInFeed(feed *Feed) {
+func normalizeURLsInFeed(feed *Feed, finalURL string) {
 	for _, item := range feed.Items {
-		item.Link = normalizeURL(item.Link, feed.Link)
+		item.Link = normalizeURL(item.Link, feed.Link, finalURL)
 	}
 }
 
-func normalizeURL(link string, base string) string {
+func normalizeURL(link string, base string, finalURL string) string {
 	// Don't touch regular http links
 	if strings.HasPrefix(link, "http://") || strings.HasPrefix(link, "https://") {
 		return link
@@ -27,6 +27,11 @@ func normalizeURL(link string, base string) string {
 	if len(pieces) == 2 && (pieces[0] == "http" || pieces[0] == "https" || isValidScheme(pieces[0])) {
 		return link
 	}
+
+	if base == "" {
+		base = finalURL
+	}
+
 	// Parse base url and use that for link
 	baseURL, err := url.Parse(base)
 	// Could not parse baseURL, not much we can do but return original

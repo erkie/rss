@@ -14,7 +14,7 @@ import (
 type ParserFunc func(data []byte) (*Feed, error)
 
 // Parse RSS or Atom data.
-func Parse(data []byte, responseHeaders http.Header) (*Feed, error) {
+func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, error) {
 	data = DiscardInvalidUTF8IfUTF8(data, responseHeaders)
 
 	var feed *Feed
@@ -54,7 +54,7 @@ func Parse(data []byte, responseHeaders http.Header) (*Feed, error) {
 		return nil, err
 	}
 
-	normalizeURLsInFeed(feed)
+	normalizeURLsInFeed(feed, finalURL)
 
 	return feed, err
 }
