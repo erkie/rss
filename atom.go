@@ -45,7 +45,11 @@ func parseAtom(data []byte) (*Feed, error) {
 		next := new(Item)
 		next.Title = strings.TrimSpace(item.Title)
 		next.Summary = strings.TrimSpace(item.Summary)
-		next.Content = strings.TrimSpace(item.Content)
+		next.Content = strings.TrimSpace(string(item.Content.CData))
+		if len(next.Content) == 0 {
+			next.Content = strings.TrimSpace(string(item.Content.Content))
+		}
+
 		if len(next.Content) == 0 {
 			next.Content = strings.TrimSpace(item.Description)
 		}
@@ -113,12 +117,17 @@ type atomItem struct {
 	XMLName     xml.Name    `xml:"entry"`
 	Title       string      `xml:"title"`
 	Summary     string      `xml:"summary"`
-	Content     string      `xml:"content"`
+	Content     atomContent `xml:"content"`
 	Description string      `xml:"description"`
 	Links       []atomLink  `xml:"link"`
 	Date        string      `xml:"updated"`
 	ID          string      `xml:"id"`
 	Media       []atomMedia `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
+}
+
+type atomContent struct {
+	Content string `xml:",innerxml"`
+	CData   string `xml:",cdata"`
 }
 
 type atomLink struct {
