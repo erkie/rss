@@ -7,6 +7,8 @@ import (
 )
 
 func normalizeURLsInFeed(feed *Feed, finalURL string) {
+	feed.Link = normalizeURL(feed.Link, "", finalURL)
+
 	for _, item := range feed.Items {
 		item.Link = normalizeURL(item.Link, feed.Link, finalURL)
 	}
@@ -28,7 +30,8 @@ func normalizeURL(link string, base string, finalURL string) string {
 		return link
 	}
 
-	if base == "" {
+	parsedBase, err := url.Parse(base)
+	if base == "" || err != nil || parsedBase.Host == "" {
 		base = finalURL
 	}
 
@@ -39,7 +42,17 @@ func normalizeURL(link string, base string, finalURL string) string {
 		return link
 	}
 
-	baseHost := baseURL.Scheme + "://" + baseURL.Host
+	// No host was able to be determined
+	if baseURL.Host == "" {
+		return link
+	}
+
+	scheme := baseURL.Scheme
+	if scheme == "" {
+		scheme = "http"
+	}
+
+	baseHost := scheme + "://" + baseURL.Host
 
 	// Simple case, URL has leading slash, otherwise we need to resolve the path
 	if strings.HasPrefix(link, "/") {

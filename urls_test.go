@@ -16,6 +16,7 @@ func TestURLsDetectPaths(t *testing.T) {
 		[]string{finalURL, a, "//github.com/syncthing/syncthing/releases/tag/v0.12.18"},
 		[]string{finalURL, a, "file://github.com/syncthing/syncthing/releases/tag/v0.12.18"},
 		[]string{finalURL, "", "/hello/world"},
+		[]string{finalURL, "/a/path", "/b/url"},
 	}
 
 	results := []string{
@@ -27,6 +28,7 @@ func TestURLsDetectPaths(t *testing.T) {
 		"http://github.com/syncthing/syncthing/releases/tag/v0.12.18",
 		"file://github.com/syncthing/syncthing/releases/tag/v0.12.18",
 		"https://gitlab.com/hello/world",
+		"https://gitlab.com/b/url",
 	}
 
 	for index, baseAndURL := range urls {
