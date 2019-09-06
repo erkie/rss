@@ -34,7 +34,7 @@ var TimeLayouts = []string{
 	time.RFC3339Nano,
 }
 
-func parseTime(s string) (time.Time, error) {
+func parseTime(s string) time.Time {
 	s = strings.TrimSpace(s)
 
 	var e error
@@ -43,11 +43,11 @@ func parseTime(s string) (time.Time, error) {
 	for _, layout := range TimeLayouts {
 		t, e = time.Parse(layout, s)
 		if e == nil {
-			return t, nil
+			return t
 		}
 	}
 
-	return defaultTime(), nil
+	return defaultTime()
 }
 
 func defaultTime() time.Time {

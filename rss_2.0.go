@@ -86,15 +86,9 @@ func parseRSS2(data []byte) (*Feed, error) {
 
 		next.Date = defaultTime()
 		if item.Date != "" {
-			next.Date, err = parseTime(item.Date)
-			if err != nil {
-				return nil, err
-			}
+			next.Date = parseTime(item.Date)
 		} else if item.PubDate != "" {
-			next.Date, err = parseTime(item.PubDate)
-			if err != nil {
-				return nil, err
-			}
+			next.Date = parseTime(item.PubDate)
 		}
 		next.ID = strings.TrimSpace(item.ID)
 		if len(item.Enclosures) > 0 {

@@ -63,11 +63,10 @@ func parseAtom(data []byte) (*Feed, error) {
 		}
 
 		next.Date = defaultTime()
-		if item.Date != "" {
-			next.Date, err = parseTime(item.Date)
-			if err != nil {
-				return nil, err
-			}
+		if item.Published != "" {
+			next.Date = parseTime(item.Published)
+		} else if item.Date != "" {
+			next.Date = parseTime(item.Date)
 		}
 		next.ID = strings.TrimSpace(item.ID)
 		for _, link := range item.Links {
@@ -120,6 +119,7 @@ type atomItem struct {
 	Content     atomContent `xml:"content"`
 	Description string      `xml:"description"`
 	Links       []atomLink  `xml:"link"`
+	Published   string      `xml:"published"`
 	Date        string      `xml:"updated"`
 	ID          string      `xml:"id"`
 	Media       []atomMedia `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/

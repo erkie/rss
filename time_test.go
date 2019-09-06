@@ -16,29 +16,24 @@ func TestParseTimeUsingOnlyDefaultLayouts(t *testing.T) {
 	// Positive cases
 	for _, layout := range originalLayouts {
 		s := timeVal.Format(layout)
-		if tv, err := parseTime(s); err != nil || !tv.Equal(timeVal) {
-			t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
+		if tv := parseTime(s); !tv.Equal(timeVal) {
+			t.Errorf("expected no err and times to equal, and time value %v", tv)
 		}
 	}
 
 	// Negative cases
-	if _, err := parseTime(""); err != nil {
-		t.Error("expected no err")
-	}
-	if _, err := parseTime("abc"); err != nil {
-		t.Error("expected no err")
-	}
+	parseTime("")
+	parseTime("abc")
+
 	custom := timeVal.Format(customLayout)
-	if _, err := parseTime(custom); err != nil {
-		t.Error("expected no err")
-	}
+	parseTime(custom)
 }
 
 func TestParseTimeUsingCustomLayoutsPrepended(t *testing.T) {
 	TimeLayouts = append([]string{customLayout}, originalLayouts...)
 	custom := timeVal.Format(customLayout)
-	if tv, err := parseTime(custom); err != nil || !tv.Equal(timeVal) {
-		t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
+	if tv := parseTime(custom); !tv.Equal(timeVal) {
+		t.Errorf("expected no err and times to equal, and time value %v", tv)
 	}
 	TimeLayouts = originalLayouts
 }
@@ -46,15 +41,15 @@ func TestParseTimeUsingCustomLayoutsPrepended(t *testing.T) {
 func TestParseTimeUsingCustomLayoutsAppended(t *testing.T) {
 	TimeLayouts = append(originalLayouts, customLayout)
 	custom := timeVal.Format(customLayout)
-	if tv, err := parseTime(custom); err != nil || !tv.Equal(timeVal) {
-		t.Errorf("expected no err and times to equal, got err %v and time value %v", err, tv)
+	if tv := parseTime(custom); !tv.Equal(timeVal) {
+		t.Errorf("expected no err and times to equal, and time value %v", tv)
 	}
 	TimeLayouts = originalLayouts
 }
 
 func TestParseWithTwoDigitYear(t *testing.T) {
 	s := "Sun, 18 Dec 16 18:25:00 +0100"
-	if tv, err := parseTime(s); err != nil || tv.Year() != 2016 {
-		t.Errorf("expected no err and year to be 2016, got err %v, and year %d", err, tv.Year())
+	if tv := parseTime(s); tv.Year() != 2016 {
+		t.Errorf("expected no err and year to be 2016, and year %d", tv.Year())
 	}
 }
