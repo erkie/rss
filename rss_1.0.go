@@ -18,7 +18,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 		return nil, err
 	}
 	if feed.Channel == nil {
-		return nil, fmt.Errorf("Error: no channel found in %q.", string(data))
+		return nil, fmt.Errorf("Error: no channel found in %q", string(data))
 	}
 
 	channel := feed.Channel
@@ -27,6 +27,7 @@ func parseRSS1(data []byte) (*Feed, error) {
 	out.Type = "rss1.0"
 	out.Title = channel.Title
 	out.Description = channel.Description
+	out.Categories = fetchCategoriesFromArray(channel.Categories, true)
 
 	for _, link := range channel.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
@@ -125,13 +126,14 @@ type rss1_0Feed struct {
 }
 
 type rss1_0Channel struct {
-	XMLName     xml.Name     `xml:"channel"`
-	Title       string       `xml:"title"`
-	Description string       `xml:"description"`
-	Links       []rss1_0Link `xml:"link"`
-	MinsToLive  string       `xml:"ttl"`
-	SkipHours   []string     `xml:"skipHours>hour"`
-	SkipDays    []string     `xml:"skipDays>day"`
+	XMLName     xml.Name          `xml:"channel"`
+	Title       string            `xml:"title"`
+	Description string            `xml:"description"`
+	Links       []rss1_0Link      `xml:"link"`
+	MinsToLive  string            `xml:"ttl"`
+	SkipHours   []string          `xml:"skipHours>hour"`
+	SkipDays    []string          `xml:"skipDays>day"`
+	Categories  []genericCategory `xml:"category"`
 }
 
 type rss1_0Item struct {

@@ -32,6 +32,7 @@ func parseAtom(data []byte) (*Feed, error) {
 			break
 		}
 	}
+	out.Categories = fetchCategoriesFromArray(feed.Categories, false)
 
 	if feed.Items == nil {
 		feed.Items = make([]atomItem, 0)
@@ -104,12 +105,13 @@ func parseAtom(data []byte) (*Feed, error) {
 }
 
 type atomFeed struct {
-	XMLName     xml.Name   `xml:"feed"`
-	Title       string     `xml:"title"`
-	Description string     `xml:"subtitle"`
-	Links       []atomLink `xml:"link"`
-	Items       []atomItem `xml:"entry"`
-	Updated     string     `xml:"updated"`
+	XMLName     xml.Name          `xml:"feed"`
+	Title       string            `xml:"title"`
+	Description string            `xml:"subtitle"`
+	Links       []atomLink        `xml:"link"`
+	Items       []atomItem        `xml:"entry"`
+	Updated     string            `xml:"updated"`
+	Categories  []genericCategory `xml:"category"`
 }
 
 type atomItem struct {

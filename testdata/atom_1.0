@@ -6,6 +6,8 @@
   <title>Titel des Weblogs</title>
   <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
   <updated>2003-12-14T10:20:09Z</updated>
+  <category>weblog</category>
+  <category>german</category>
 
   <entry>
     <title>Titel des Weblog-Eintrags</title>

@@ -26,6 +26,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 	out.Type = "rss2.0"
 	out.Title = strings.TrimSpace(channel.Title)
 	out.Description = strings.TrimSpace(channel.Description)
+	out.Categories = fetchCategoriesFromArray(channel.Categories, true)
 	for _, link := range channel.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
 			if link.Href == "" && link.Contents != "" {
@@ -126,14 +127,15 @@ type rss2_0Feed struct {
 }
 
 type rss2_0Channel struct {
-	XMLName     xml.Name     `xml:"channel"`
-	Title       string       `xml:"title"`
-	Description string       `xml:"description"`
-	Links       []rss2_0Link `xml:"link"`
-	Items       []rss2_0Item `xml:"item"`
-	MinsToLive  string       `xml:"ttl"`
-	SkipHours   []string     `xml:"skipHours>hour"`
-	SkipDays    []string     `xml:"skipDays>day"`
+	XMLName     xml.Name          `xml:"channel"`
+	Title       string            `xml:"title"`
+	Description string            `xml:"description"`
+	Links       []rss2_0Link      `xml:"link"`
+	Items       []rss2_0Item      `xml:"item"`
+	MinsToLive  string            `xml:"ttl"`
+	SkipHours   []string          `xml:"skipHours>hour"`
+	SkipDays    []string          `xml:"skipDays>day"`
+	Categories  []genericCategory `xml:"category"`
 }
 
 type rss2_0Item struct {

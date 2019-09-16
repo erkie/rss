@@ -68,6 +68,7 @@ type Feed struct {
 	UpdateURL   string // URL of the feed itself.
 	Items       []*Item
 	Links       []*Link
+	Categories  []string
 }
 
 // Links as defined inside RSS feeds that can contain various information

@@ -10,6 +10,7 @@
 		<managingEditor>dave@userland.com (Dave Winer)</managingEditor>
 		<webMaster>dave@userland.com (Dave Winer)</webMaster>
 		<cloud domain="data.ourfavoritesongs.com" port="80" path="/RPC2" registerProcedure="ourFavoriteSongs.rssPleaseNotify" protocol="xml-rpc"/>
+		<category>Author/Scripting/Userland</category>
 		<item>
 			<description>It&apos;s been a few days since I added a song to the Grateful Dead channel. Now that there are all these new Radio users, many of whom are tuned into this channel (it&apos;s #16 on the hotlist of upstreaming Radio users, there&apos;s no way of knowing how many non-upstreaming users are subscribing, have to do something about this..). Anyway, tonight&apos;s song is a live version of Weather Report Suite from Dick&apos;s Picks Volume 7. It&apos;s wistful music. Of course a beautiful song, oft-quoted here on Scripting News. &lt;i&gt;A little change, the wind and rain.&lt;/i&gt;
 </description>
