@@ -53,3 +53,18 @@ func TestParseWithTwoDigitYear(t *testing.T) {
 		t.Errorf("expected no err and year to be 2016, and year %d", tv.Year())
 	}
 }
+
+func TestParser(t *testing.T) {
+	s := []string{
+		"2016-06-28T00:00:00",
+	}
+	res := []time.Time{
+		time.Date(2016, 6, 28, 0, 0, 0, 0, time.UTC),
+	}
+	for i, form := range s {
+		tv := parseTime(form)
+		if tv != res[i] {
+			t.Errorf("expected no err and year to be 2016, and year %d", tv.Year())
+		}
+	}
+}
