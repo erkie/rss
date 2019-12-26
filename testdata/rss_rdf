@@ -1,0 +1,1322 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:cc="http://web.resource.org/cc/"
+         xmlns:content="http://purl.org/rss/1.0/modules/content/"
+         xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <title>tandf: Journal of Computational and Graphical Statistics: Table of Contents</title>
+      <description>Table of Contents for Journal of Computational and Graphical Statistics. List of articles from both the latest and ahead of print issues.</description>
+      <dc:title>tandf: Journal of Computational and Graphical Statistics: Table of Contents</dc:title>
+      <dc:publisher>tandf</dc:publisher>
+      <dc:language>en-US</dc:language>
+      <prism:publicationName>Journal of Computational and Graphical Statistics</prism:publicationName>
+      <items>
+         <rdf:Seq>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609976?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609977?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598872?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592756?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592757?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594835?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598871?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1601097?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598869?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1586714?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598870?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593179?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604374?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1607744?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592758?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594834?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593180?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604373?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1610312?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637746?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1631620?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654746?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1695454?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694523?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694524?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1686988?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677474?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677243?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677244?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665537?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665535?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1668800?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665534?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665536?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660180?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647846?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660178?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660179?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654881?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654880?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647216?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647849?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1652616?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1648271?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647215?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647848?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647847?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637749?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637747?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637748?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629941?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624365?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624366?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629943?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624294?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617159?af=R"/>
+            <rdf:li rdf:resource="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617160?af=R"/>
+         </rdf:Seq>
+      </items>
+   </channel>
+   <image rdf:about="https://www.tandfonline.com/na101/home/literatum/publisher/tandf/journals/content/ucgs20/2019/ucgs20.v028.i04/ucgs20.v028.i04/20191223-01/ucgs20.v028.i04.cover.jpg">
+      <title>Journal of Computational and Graphical Statistics</title>
+      <url>https://www.tandfonline.com/na101/home/literatum/publisher/tandf/journals/content/ucgs20/2019/ucgs20.v028.i04/ucgs20.v028.i04/20191223-01/ucgs20.v028.i04.cover.jpg</url>
+      <link>https://www.tandfonline.com/loi/ucgs20?af=R</link>
+   </image>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609976?af=R">
+      <title>An Expectation Conditional Maximization Approach for Gaussian Graphical Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609976?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 767-777&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 767-777&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>An Expectation Conditional Maximization Approach for Gaussian Graphical Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1609976</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Zehang Richard Li</dc:creator>
+      <dc:creator>Tyler H. McCormick</dc:creator>
+      <prism:publicationName>An Expectation Conditional Maximization Approach for Gaussian Graphical Models</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>767</prism:startingPage>
+      <prism:endingPage>777</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1609976</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609976?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598872?af=R">
+      <title>Adaptive Incremental Mixture Markov Chain Monte Carlo</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598872?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 790-805&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 790-805&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Adaptive Incremental Mixture Markov Chain Monte Carlo</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1598872</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+      <dc:creator>Florian Maire</dc:creator>
+      <dc:creator>Nial Friel</dc:creator>
+      <dc:creator>Antonietta Mira</dc:creator>
+      <dc:creator>Adrian E. Raftery</dc:creator>
+      <prism:publicationName>Adaptive Incremental Mixture Markov Chain Monte Carlo</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>790</prism:startingPage>
+      <prism:endingPage>805</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1598872</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598872?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609977?af=R">
+      <title>Beyond Prediction: A Framework for Inference With Variational Approximations in Mixture Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609977?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 778-789&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 778-789&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Beyond Prediction: A Framework for Inference With Variational Approximations in Mixture Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1609977</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>T. Westling</dc:creator>
+      <dc:creator>T. H. McCormick</dc:creator>
+      <prism:publicationName>Beyond Prediction: A Framework for Inference With Variational Approximations in Mixture Models</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>778</prism:startingPage>
+      <prism:endingPage>789</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1609977</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1609977?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592756?af=R">
+      <title>Incremental Mixture Importance Sampling With Shotgun Optimization</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592756?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 806-820&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 806-820&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Incremental Mixture Importance Sampling With Shotgun Optimization</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1592756</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Biljana Jonoska Stojkova</dc:creator>
+      <dc:creator>David A. Campbell</dc:creator>
+      <prism:publicationName>Incremental Mixture Importance Sampling With Shotgun Optimization</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>806</prism:startingPage>
+      <prism:endingPage>820</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1592756</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592756?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592757?af=R">
+      <title>Easily Parallelizable and Distributable Class of Algorithms for Structured Sparsity, with Optimal Acceleration</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592757?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 821-833&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 821-833&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Easily Parallelizable and Distributable Class of Algorithms for Structured Sparsity, with Optimal Acceleration</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1592757</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Seyoon Ko</dc:creator>
+      <dc:creator>Donghyeon Yu</dc:creator>
+      <dc:creator>Joong-Ho Won</dc:creator>
+      <prism:publicationName>Easily Parallelizable and Distributable Class of Algorithms for Structured Sparsity, with Optimal Acceleration</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>821</prism:startingPage>
+      <prism:endingPage>833</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1592757</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592757?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594835?af=R">
+      <title>Damped Anderson Acceleration With Restarts and Monotonicity Control for Accelerating EM and EM-like Algorithms</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594835?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 834-846&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 834-846&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Damped Anderson Acceleration With Restarts and Monotonicity Control for Accelerating EM and EM-like Algorithms</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1594835</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Nicholas C. Henderson</dc:creator>
+      <dc:creator>Ravi Varadhan</dc:creator>
+      <prism:publicationName>Damped Anderson Acceleration With Restarts and Monotonicity Control for Accelerating EM and EM-like Algorithms</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>834</prism:startingPage>
+      <prism:endingPage>846</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1594835</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594835?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598871?af=R">
+      <title>Projection Pursuit Based on Gaussian Mixtures and Evolutionary Algorithms</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598871?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 847-860&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 847-860&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Projection Pursuit Based on Gaussian Mixtures and Evolutionary Algorithms</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1598871</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Luca Scrucca</dc:creator>
+      <dc:creator>Alessio Serafini</dc:creator>
+      <prism:publicationName>Projection Pursuit Based on Gaussian Mixtures and Evolutionary Algorithms</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>847</prism:startingPage>
+      <prism:endingPage>860</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1598871</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598871?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1601097?af=R">
+      <title>A Metaheuristic Adaptive Cubature Based Algorithm to Find Bayesian Optimal Designs for Nonlinear Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1601097?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 861-876&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 861-876&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>A Metaheuristic Adaptive Cubature Based Algorithm to Find Bayesian Optimal Designs for Nonlinear Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1601097</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Ehsan Masoudi</dc:creator>
+      <dc:creator>Heinz Holling</dc:creator>
+      <dc:creator>Belmiro P. M. Duarte</dc:creator>
+      <dc:creator>Weng Kee Wong</dc:creator>
+      <prism:publicationName>A Metaheuristic Adaptive Cubature Based Algorithm to Find Bayesian Optimal Designs for Nonlinear Models</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>861</prism:startingPage>
+      <prism:endingPage>876</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1601097</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1601097?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598869?af=R">
+      <title>Influence Diagnostics for High-Dimensional Lasso Regression</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598869?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 877-890&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 877-890&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Influence Diagnostics for High-Dimensional Lasso Regression</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1598869</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+      <dc:creator>Bala Rajaratnam</dc:creator>
+      <dc:creator>Steven Roberts</dc:creator>
+      <dc:creator>Doug Sparks</dc:creator>
+      <dc:creator>Honglin Yu</dc:creator>
+      <prism:publicationName>Influence Diagnostics for High-Dimensional Lasso Regression</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>877</prism:startingPage>
+      <prism:endingPage>890</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1598869</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598869?af=R</prism:url>
+      <prism:copyright>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1586714?af=R">
+      <title>Distributed Generalized Cross-Validation for Divide-and-Conquer Kernel Ridge Regression and Its Asymptotic Optimality</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1586714?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 891-908&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 891-908&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Distributed Generalized Cross-Validation for Divide-and-Conquer Kernel Ridge Regression and Its Asymptotic Optimality</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1586714</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Ganggang Xu</dc:creator>
+      <dc:creator>Zuofeng Shang</dc:creator>
+      <dc:creator>Guang Cheng</dc:creator>
+      <prism:publicationName>Distributed Generalized Cross-Validation for Divide-and-Conquer Kernel Ridge Regression and Its Asymptotic Optimality</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>891</prism:startingPage>
+      <prism:endingPage>908</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1586714</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1586714?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598870?af=R">
+      <title>Component-Based Regularization of Multivariate Generalized Linear Mixed Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598870?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 909-920&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 909-920&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Component-Based Regularization of Multivariate Generalized Linear Mixed Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1598870</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Jocelyn Chauvet</dc:creator>
+      <dc:creator>Catherine Trottier</dc:creator>
+      <dc:creator>Xavier Bry</dc:creator>
+      <prism:publicationName>Component-Based Regularization of Multivariate Generalized Linear Mixed Models</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>909</prism:startingPage>
+      <prism:endingPage>920</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1598870</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1598870?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593179?af=R">
+      <title>Simultaneous Variable and Covariance Selection With the Multivariate Spike-and-Slab LASSO</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593179?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 921-931&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 921-931&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Simultaneous Variable and Covariance Selection With the Multivariate Spike-and-Slab LASSO</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1593179</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Sameer K. Deshpande</dc:creator>
+      <dc:creator>Veronika Ročková</dc:creator>
+      <dc:creator>Edward I. George</dc:creator>
+      <prism:publicationName>Simultaneous Variable and Covariance Selection With the Multivariate Spike-and-Slab LASSO</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>921</prism:startingPage>
+      <prism:endingPage>931</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1593179</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593179?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604374?af=R">
+      <title>The Generalized Ridge Estimator of the Inverse Covariance Matrix</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604374?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 932-942&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 932-942&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>The Generalized Ridge Estimator of the Inverse Covariance Matrix</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1604374</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 The Author(s). Published with License by Taylor &amp; Francis Group, LLC.</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+      <dc:creator>Wessel N. van Wieringen</dc:creator>
+      <prism:publicationName>The Generalized Ridge Estimator of the Inverse Covariance Matrix</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>932</prism:startingPage>
+      <prism:endingPage>942</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1604374</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604374?af=R</prism:url>
+      <prism:copyright>© 2019 The Author(s). Published with License by Taylor &amp; Francis Group, LLC.</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1607744?af=R">
+      <title>Simultaneous Registration and Clustering for Multidimensional Functional Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1607744?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 943-953&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 943-953&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Simultaneous Registration and Clustering for Multidimensional Functional Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1607744</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Pengcheng Zeng</dc:creator>
+      <dc:creator>Jian Qing Shi</dc:creator>
+      <dc:creator>Won-Seok Kim</dc:creator>
+      <prism:publicationName>Simultaneous Registration and Clustering for Multidimensional Functional Data</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>943</prism:startingPage>
+      <prism:endingPage>953</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1607744</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1607744?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592758?af=R">
+      <title>Flexible and Interpretable Models for Survival Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592758?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 954-966&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 954-966&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Flexible and Interpretable Models for Survival Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1592758</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Jiacheng Wu</dc:creator>
+      <dc:creator>Daniela Witten</dc:creator>
+      <prism:publicationName>Flexible and Interpretable Models for Survival Data</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>954</prism:startingPage>
+      <prism:endingPage>966</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1592758</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1592758?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594834?af=R">
+      <title>Stable Multiple Time Step Simulation/Prediction From Lagged Dynamic Network Regression Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594834?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 967-979&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 967-979&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Stable Multiple Time Step Simulation/Prediction From Lagged Dynamic Network Regression Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1594834</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Abhirup Mallik</dc:creator>
+      <dc:creator>Zack W. Almquist</dc:creator>
+      <prism:publicationName>Stable Multiple Time Step Simulation/Prediction From Lagged Dynamic Network Regression Models</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>967</prism:startingPage>
+      <prism:endingPage>979</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1594834</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1594834?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593180?af=R">
+      <title>Improving Spectral Clustering Using the Asymptotic Value of the Normalized Cut</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593180?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 980-992&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 980-992&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Improving Spectral Clustering Using the Asymptotic Value of the Normalized Cut</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1593180</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>David P. Hofmeyr</dc:creator>
+      <prism:publicationName>Improving Spectral Clustering Using the Asymptotic Value of the Normalized Cut</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>980</prism:startingPage>
+      <prism:endingPage>992</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1593180</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1593180?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604373?af=R">
+      <title>Variable-Domain Functional Principal Component Analysis</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604373?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 993-1006&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 993-1006&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Variable-Domain Functional Principal Component Analysis</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1604373</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Jordan T. Johns</dc:creator>
+      <dc:creator>Ciprian Crainiceanu</dc:creator>
+      <dc:creator>Vadim Zipunnikov</dc:creator>
+      <dc:creator>Jonathan Gellar</dc:creator>
+      <prism:publicationName>Variable-Domain Functional Principal Component Analysis</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>993</prism:startingPage>
+      <prism:endingPage>1006</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1604373</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1604373?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1610312?af=R">
+      <title>Fast Generalized Linear Models by Database Sampling and One-Step Polishing</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1610312?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 1007-1010&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 1007-1010&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Fast Generalized Linear Models by Database Sampling and One-Step Polishing</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1610312</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Thomas Lumley</dc:creator>
+      <prism:publicationName>Fast Generalized Linear Models by Database Sampling and One-Step Polishing</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>1007</prism:startingPage>
+      <prism:endingPage>1010</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1610312</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1610312?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637746?af=R">
+      <title>Good Plot Symbols by Default</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637746?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 1011-1016&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 1011-1016&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Good Plot Symbols by Default</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1637746</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Heman Robinson</dc:creator>
+      <prism:publicationName>Good Plot Symbols by Default</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>1011</prism:startingPage>
+      <prism:endingPage>1016</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1637746</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637746?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1631620?af=R">
+      <title>Correction</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1631620?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page i-i&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page i-i&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Correction</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1631620</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <prism:publicationName>Correction</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>i</prism:startingPage>
+      <prism:endingPage>i</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1631620</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1631620?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654746?af=R">
+      <title>Correction</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654746?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page ii-ii&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page ii-ii&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Correction</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1654746</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <prism:publicationName>Correction</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>ii</prism:startingPage>
+      <prism:endingPage>ii</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1654746</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654746?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1695454?af=R">
+      <title>Correction</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1695454?af=R</link>
+      <content:encoded>&lt;a href="/toc/ucgs20/28/4"&gt;Volume 28, Issue 4&lt;/a&gt;, October-December 2019, Page 1017-1017&lt;br/&gt;. &lt;br/&gt;</content:encoded>
+      <description>Volume 28, Issue 4, October-December 2019, Page 1017-1017&lt;br/&gt;. &lt;br/&gt;</description>
+      <dc:title>Correction</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1695454</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date>2019-10-02T07:00:00Z</dc:date>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <prism:publicationName>Correction</prism:publicationName>
+      <prism:volume>28</prism:volume>
+      <prism:number>4</prism:number>
+      <prism:startingPage>1017</prism:startingPage>
+      <prism:endingPage>1017</prism:endingPage>
+      <prism:coverDate>2019-10-02T07:00:00Z</prism:coverDate>
+      <prism:coverDisplayDate>2019-10-02T07:00:00Z</prism:coverDisplayDate>
+      <prism:doi>10.1080/10618600.2019.1695454</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1695454?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694523?af=R">
+      <title>Inferring Influence Networks From Longitudinal Bipartite Relational Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694523?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Inferring Influence Networks From Longitudinal Bipartite Relational Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1694523</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Frank W. Marrs</dc:creator>
+      <dc:creator>Benjamin W. Campbell</dc:creator>
+      <dc:creator>Bailey K. Fosdick</dc:creator>
+      <dc:creator>Skyler J. Cranmer</dc:creator>
+      <dc:creator>Tobias Böhmelt</dc:creator>
+      <prism:publicationName>Inferring Influence Networks From Longitudinal Bipartite Relational Data</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>13</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1694523</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694523?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694524?af=R">
+      <title>First- and Second-Order Characteristics of Spatio-Temporal Point Processes on Linear Networks</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694524?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>First- and Second-Order Characteristics of Spatio-Temporal Point Processes on Linear Networks</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1694524</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>M. Mehdi Moradi</dc:creator>
+      <dc:creator>Jorge Mateu</dc:creator>
+      <prism:publicationName>First- and Second-Order Characteristics of Spatio-Temporal Point Processes on Linear Networks</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>21</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1694524</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1694524?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1686988?af=R">
+      <title>A Bayesian Time-Varying Coefficient Model for Multitype Recurrent Events</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1686988?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>A Bayesian Time-Varying Coefficient Model for Multitype Recurrent Events</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1686988</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Yi Liu</dc:creator>
+      <dc:creator>Feng Guo</dc:creator>
+      <prism:publicationName>A Bayesian Time-Varying Coefficient Model for Multitype Recurrent Events</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1686988</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1686988?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677474?af=R">
+      <title>Testing One Hypothesis Multiple Times: The Multidimensional Case</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677474?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Testing One Hypothesis Multiple Times: The Multidimensional Case</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1677474</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Sara Algeri</dc:creator>
+      <dc:creator>David A. van Dyk</dc:creator>
+      <prism:publicationName>Testing One Hypothesis Multiple Times: The Multidimensional Case</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>14</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1677474</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677474?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677243?af=R">
+      <title>Heteroscedastic BART via Multiplicative Regression Trees</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677243?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Heteroscedastic BART via Multiplicative Regression Trees</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1677243</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>M. T. Pratola</dc:creator>
+      <dc:creator>H. A. Chipman</dc:creator>
+      <dc:creator>E. I. George</dc:creator>
+      <dc:creator>R. E. McCulloch</dc:creator>
+      <prism:publicationName>Heteroscedastic BART via Multiplicative Regression Trees</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>13</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1677243</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677243?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677244?af=R">
+      <title>Longitudinal Principal Component Analysis With an Application to Marketing Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677244?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Longitudinal Principal Component Analysis With an Application to Marketing Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1677244</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Christopher Kinson</dc:creator>
+      <dc:creator>Xiwei Tang</dc:creator>
+      <dc:creator>Zhen Zuo</dc:creator>
+      <dc:creator>Annie Qu</dc:creator>
+      <prism:publicationName>Longitudinal Principal Component Analysis With an Application to Marketing Data</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>16</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1677244</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1677244?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665537?af=R">
+      <title>The Rational SPDE Approach for Gaussian Random Fields With General Smoothness</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665537?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>The Rational SPDE Approach for Gaussian Random Fields With General Smoothness</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1665537</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group, LLC</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dc:creator>David Bolin</dc:creator>
+      <dc:creator>Kristin Kirchner</dc:creator>
+      <prism:publicationName>The Rational SPDE Approach for Gaussian Random Fields With General Smoothness</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1665537</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665537?af=R</prism:url>
+      <prism:copyright>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group, LLC</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665535?af=R">
+      <title>A Logistic Factorization Model for Recommender Systems With Multinomial Responses</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665535?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>A Logistic Factorization Model for Recommender Systems With Multinomial Responses</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1665535</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Yu Wang</dc:creator>
+      <dc:creator>Xuan Bi</dc:creator>
+      <dc:creator>Annie Qu</dc:creator>
+      <prism:publicationName>A Logistic Factorization Model for Recommender Systems With Multinomial Responses</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>9</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1665535</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665535?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1668800?af=R">
+      <title>Simulating Markov Random Fields With a Conclique-Based Gibbs Sampler</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1668800?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Simulating Markov Random Fields With a Conclique-Based Gibbs Sampler</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1668800</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Andee Kaplan</dc:creator>
+      <dc:creator>Mark S. Kaiser</dc:creator>
+      <dc:creator>Soumendra N. Lahiri</dc:creator>
+      <dc:creator>Daniel J. Nordman</dc:creator>
+      <prism:publicationName>Simulating Markov Random Fields With a Conclique-Based Gibbs Sampler</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>11</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1668800</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1668800?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665534?af=R">
+      <title>Fast Nonseparable Gaussian Stochastic Process With Application to Methylation Level Interpolation</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665534?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Fast Nonseparable Gaussian Stochastic Process With Application to Methylation Level Interpolation</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1665534</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Mengyang Gu</dc:creator>
+      <dc:creator>Yanxun Xu</dc:creator>
+      <prism:publicationName>Fast Nonseparable Gaussian Stochastic Process With Application to Methylation Level Interpolation</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>11</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1665534</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665534?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665536?af=R">
+      <title>Consistent Blind Image Deblurring Using Jump-Preserving Extrapolation</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665536?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Consistent Blind Image Deblurring Using Jump-Preserving Extrapolation</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1665536</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Yicheng Kang</dc:creator>
+      <prism:publicationName>Consistent Blind Image Deblurring Using Jump-Preserving Extrapolation</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>11</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1665536</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1665536?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660180?af=R">
+      <title>Valid Inference Corrected for Outlier Removal</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660180?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Valid Inference Corrected for Outlier Removal</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1660180</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Shuxiao Chen</dc:creator>
+      <dc:creator>Jacob Bien</dc:creator>
+      <prism:publicationName>Valid Inference Corrected for Outlier Removal</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1660180</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660180?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647846?af=R">
+      <title>Estimating the Number of Clusters Using Cross-Validation</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647846?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Estimating the Number of Clusters Using Cross-Validation</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647846</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Wei Fu</dc:creator>
+      <dc:creator>Patrick O. Perry</dc:creator>
+      <prism:publicationName>Estimating the Number of Clusters Using Cross-Validation</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647846</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647846?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660178?af=R">
+      <title>Solving Fused Penalty Estimation Problems via Block Splitting Algorithms</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660178?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Solving Fused Penalty Estimation Problems via Block Splitting Algorithms</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1660178</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Tso-Jung Yen</dc:creator>
+      <prism:publicationName>Solving Fused Penalty Estimation Problems via Block Splitting Algorithms</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1660178</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660178?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660179?af=R">
+      <title>Compressed and Penalized Linear Regression</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660179?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Compressed and Penalized Linear Regression</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1660179</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Darren Homrighausen</dc:creator>
+      <dc:creator>Daniel J. McDonald</dc:creator>
+      <prism:publicationName>Compressed and Penalized Linear Regression</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>14</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1660179</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1660179?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654881?af=R">
+      <title>Area-Proportional Visualization for Circular Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654881?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Area-Proportional Visualization for Circular Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1654881</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Danli Xu</dc:creator>
+      <dc:creator>Yong Wang</dc:creator>
+      <prism:publicationName>Area-Proportional Visualization for Circular Data</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>7</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1654881</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654881?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654880?af=R">
+      <title>Scalable Bayesian Inference for Coupled Hidden Markov and Semi-Markov Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654880?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Scalable Bayesian Inference for Coupled Hidden Markov and Semi-Markov Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1654880</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group, LLC</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dc:creator>Panayiota Touloupou</dc:creator>
+      <dc:creator>Bärbel Finkenstädt</dc:creator>
+      <dc:creator>Simon E. F. Spencer</dc:creator>
+      <prism:publicationName>Scalable Bayesian Inference for Coupled Hidden Markov and Semi-Markov Models</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1654880</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1654880?af=R</prism:url>
+      <prism:copyright>© 2019 The Author(s). Published with license by Taylor &amp; Francis Group, LLC</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647216?af=R">
+      <title>Parallelization of a Common Changepoint Detection Method</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647216?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Parallelization of a Common Changepoint Detection Method</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647216</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 The Author(s). Published with license by Taylor and Francis Group, LLC</dc:rights>
+      <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dc:creator>S. O. Tickle</dc:creator>
+      <dc:creator>I. A. Eckley</dc:creator>
+      <dc:creator>P. Fearnhead</dc:creator>
+      <dc:creator>K. Haynes</dc:creator>
+      <prism:publicationName>Parallelization of a Common Changepoint Detection Method</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>13</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647216</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647216?af=R</prism:url>
+      <prism:copyright>© 2019 The Author(s). Published with license by Taylor and Francis Group, LLC</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647849?af=R">
+      <title>Bivariate Residual Plots With Simulation Polygons</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647849?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Bivariate Residual Plots With Simulation Polygons</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647849</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Rafael A. Moral</dc:creator>
+      <dc:creator>John Hinde</dc:creator>
+      <dc:creator>Clarice G. B. Demétrio</dc:creator>
+      <prism:publicationName>Bivariate Residual Plots With Simulation Polygons</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647849</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647849?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1652616?af=R">
+      <title>Scalable Gaussian Process Computations Using Hierarchical Matrices</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1652616?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Scalable Gaussian Process Computations Using Hierarchical Matrices</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1652616</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>Government License: The submitted manuscript has been created by UChicago Argonne, LLC, Operator of Argonne National Laboratory (“Argonne”). Argonne, a U.S. Department of Energy Office of Science laboratory, is operated under Contract No. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive, irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan. http://energy.gov/downloads/doe-public-access-plan</dc:rights>
+      <dc:creator>Christopher J. Geoga</dc:creator>
+      <dc:creator>Mihai Anitescu</dc:creator>
+      <dc:creator>Michael L. Stein</dc:creator>
+      <prism:publicationName>Scalable Gaussian Process Computations Using Hierarchical Matrices</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>11</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1652616</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1652616?af=R</prism:url>
+      <prism:copyright>Government License: The submitted manuscript has been created by UChicago Argonne, LLC, Operator of Argonne National Laboratory (“Argonne”). Argonne, a U.S. Department of Energy Office of Science laboratory, is operated under Contract No. DE-AC02-06CH11357. The U.S. Government retains for itself, and others acting on its behalf, a paid-up nonexclusive, irrevocable worldwide license in said article to reproduce, prepare derivative works, distribute copies to the public, and perform publicly and display publicly, by or on behalf of the Government. The Department of Energy will provide public access to these results of federally sponsored research in accordance with the DOE Public Access Plan. http://energy.gov/downloads/doe-public-access-plan</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1648271?af=R">
+      <title>A Pliable Lasso</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1648271?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>A Pliable Lasso</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1648271</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Robert Tibshirani</dc:creator>
+      <dc:creator>Jerome Friedman</dc:creator>
+      <prism:publicationName>A Pliable Lasso</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>11</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1648271</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1648271?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647215?af=R">
+      <title>Efficient Construction of Test Inversion Confidence Intervals Using Quantile Regression</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647215?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Efficient Construction of Test Inversion Confidence Intervals Using Quantile Regression</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647215</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Eyal Fisher</dc:creator>
+      <dc:creator>Regev Schweiger</dc:creator>
+      <dc:creator>Saharon Rosset</dc:creator>
+      <prism:publicationName>Efficient Construction of Test Inversion Confidence Intervals Using Quantile Regression</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>9</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647215</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647215?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647848?af=R">
+      <title>Estimating Time-Varying Graphical Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647848?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Estimating Time-Varying Graphical Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647848</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Jilei Yang</dc:creator>
+      <dc:creator>Jie Peng</dc:creator>
+      <prism:publicationName>Estimating Time-Varying Graphical Models</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647848</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647848?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647847?af=R">
+      <title>Bayesian Model Averaging Over Tree-based Dependence Structures for Multivariate Extremes</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647847?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Bayesian Model Averaging Over Tree-based Dependence Structures for Multivariate Extremes</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1647847</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Sabrina Vettori</dc:creator>
+      <dc:creator>Raphaël Huser</dc:creator>
+      <dc:creator>Johan Segers</dc:creator>
+      <dc:creator>Marc G. Genton</dc:creator>
+      <prism:publicationName>Bayesian Model Averaging Over Tree-based Dependence Structures for Multivariate Extremes</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>17</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1647847</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1647847?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637749?af=R">
+      <title>Testing Sparsity-Inducing Penalties</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637749?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Testing Sparsity-Inducing Penalties</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1637749</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Maryclare Griffin</dc:creator>
+      <dc:creator>Peter D. Hoff</dc:creator>
+      <prism:publicationName>Testing Sparsity-Inducing Penalties</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1637749</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637749?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637747?af=R">
+      <title>Bayesian Deep Net GLM and GLMM</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637747?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Bayesian Deep Net GLM and GLMM</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1637747</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>M.-N. Tran</dc:creator>
+      <dc:creator>N. Nguyen</dc:creator>
+      <dc:creator>D. Nott</dc:creator>
+      <dc:creator>R. Kohn</dc:creator>
+      <prism:publicationName>Bayesian Deep Net GLM and GLMM</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>17</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1637747</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637747?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637748?af=R">
+      <title>Diagonal Discriminant Analysis With Feature Selection for High-Dimensional Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637748?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Diagonal Discriminant Analysis With Feature Selection for High-Dimensional Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1637748</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Sarah E. Romanes</dc:creator>
+      <dc:creator>John T. Ormerod</dc:creator>
+      <dc:creator>Jean Y. H. Yang</dc:creator>
+      <prism:publicationName>Diagonal Discriminant Analysis With Feature Selection for High-Dimensional Data</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>14</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1637748</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1637748?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629941?af=R">
+      <title>A Function Emulation Approach for Doubly Intractable Distributions</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629941?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>A Function Emulation Approach for Doubly Intractable Distributions</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1629941</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Jaewoo Park</dc:creator>
+      <dc:creator>Murali Haran</dc:creator>
+      <prism:publicationName>A Function Emulation Approach for Doubly Intractable Distributions</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>12</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1629941</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629941?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624365?af=R">
+      <title>BIVAS: A Scalable Bayesian Method for Bi-Level Variable Selection With Applications</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624365?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>BIVAS: A Scalable Bayesian Method for Bi-Level Variable Selection With Applications</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1624365</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Mingxuan Cai</dc:creator>
+      <dc:creator>Mingwei Dai</dc:creator>
+      <dc:creator>Jingsi Ming</dc:creator>
+      <dc:creator>Heng Peng</dc:creator>
+      <dc:creator>Jin Liu</dc:creator>
+      <dc:creator>Can Yang</dc:creator>
+      <prism:publicationName>BIVAS: A Scalable Bayesian Method for Bi-Level Variable Selection With Applications</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>13</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1624365</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624365?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624366?af=R">
+      <title>Scalable Bayesian Nonparametric Clustering and Classification</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624366?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Scalable Bayesian Nonparametric Clustering and Classification</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1624366</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Yang Ni</dc:creator>
+      <dc:creator>Peter Müller</dc:creator>
+      <dc:creator>Maurice Diesendruck</dc:creator>
+      <dc:creator>Sinead Williamson</dc:creator>
+      <dc:creator>Yitan Zhu</dc:creator>
+      <dc:creator>Yuan Ji</dc:creator>
+      <prism:publicationName>Scalable Bayesian Nonparametric Clustering and Classification</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>13</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1624366</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624366?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942?af=R">
+      <title>Scalable Visualization Methods for Modern Generalized Additive Models</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Scalable Visualization Methods for Modern Generalized Additive Models</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1629942</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Matteo Fasiolo</dc:creator>
+      <dc:creator>Raphaël Nedellec</dc:creator>
+      <dc:creator>Yannig Goude</dc:creator>
+      <dc:creator>Simon N. Wood</dc:creator>
+      <prism:publicationName>Scalable Visualization Methods for Modern Generalized Additive Models</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>9</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1629942</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629942?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629943?af=R">
+      <title>Dynamic Visualization and Fast Computation for Convex Clustering via Algorithmic Regularization</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629943?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Dynamic Visualization and Fast Computation for Convex Clustering via Algorithmic Regularization</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1629943</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Michael Weylandt</dc:creator>
+      <dc:creator>John Nagorski</dc:creator>
+      <dc:creator>Genevera I. Allen</dc:creator>
+      <prism:publicationName>Dynamic Visualization and Fast Computation for Convex Clustering via Algorithmic Regularization</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>10</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1629943</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1629943?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624294?af=R">
+      <title>Scalable Bayesian Regression in High Dimensions With Multiple Data Sources</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624294?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Scalable Bayesian Regression in High Dimensions With Multiple Data Sources</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1624294</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Konstantinos Perrakis</dc:creator>
+      <dc:creator>Sach Mukherjee</dc:creator>
+      <dc:creator> The Alzheimer’s Disease Neuroimaging Initiative</dc:creator>
+      <prism:publicationName>Scalable Bayesian Regression in High Dimensions With Multiple Data Sources</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>22</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1624294</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1624294?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617159?af=R">
+      <title>A Semiparametric Bayesian Approach to Dropout in Longitudinal Studies With Auxiliary Covariates</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617159?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>A Semiparametric Bayesian Approach to Dropout in Longitudinal Studies With Auxiliary Covariates</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1617159</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Tianjian Zhou</dc:creator>
+      <dc:creator>Michael J. Daniels</dc:creator>
+      <dc:creator>Peter Müller</dc:creator>
+      <prism:publicationName>A Semiparametric Bayesian Approach to Dropout in Longitudinal Studies With Auxiliary Covariates</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>24</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1617159</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617159?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+   <item rdf:about="https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617160?af=R">
+      <title>Anomaly Detection in Streaming Nonstationary Temporal Data</title>
+      <link>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617160?af=R</link>
+      <content:encoded>. &lt;br/&gt;</content:encoded>
+      <description>. &lt;br/&gt;</description>
+      <dc:title>Anomaly Detection in Streaming Nonstationary Temporal Data</dc:title>
+      <dc:identifier>doi:10.1080/10618600.2019.1617160</dc:identifier>
+      <dc:source>Journal of Computational and Graphical Statistics</dc:source>
+      <dc:date/>
+      <dc:rights>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</dc:rights>
+      <dc:creator>Priyanga Dilini Talagala</dc:creator>
+      <dc:creator>Rob J. Hyndman</dc:creator>
+      <dc:creator>Kate Smith-Miles</dc:creator>
+      <dc:creator>Sevvandi Kandanaarachchi</dc:creator>
+      <dc:creator>Mario A. Muñoz</dc:creator>
+      <prism:publicationName>Anomaly Detection in Streaming Nonstationary Temporal Data</prism:publicationName>
+      <prism:startingPage>1</prism:startingPage>
+      <prism:endingPage>21</prism:endingPage>
+      <prism:doi>10.1080/10618600.2019.1617160</prism:doi>
+      <prism:url>https://www.tandfonline.com/doi/full/10.1080/10618600.2019.1617160?af=R</prism:url>
+      <prism:copyright>© 2019 American Statistical Association, Institute of Mathematical Statistics, and Interface Foundation of North America</prism:copyright>
+   </item>
+</rdf:RDF>
