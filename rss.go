@@ -11,6 +11,7 @@ import (
 	"time"
 )
 
+// ParserFunc is the interface for a parser
 type ParserFunc func(data []byte) (*Feed, error)
 
 // Parse RSS or Atom data.
@@ -71,7 +72,7 @@ type Feed struct {
 	Categories  []string
 }
 
-// Links as defined inside RSS feeds that can contain various information
+// Link as defined inside RSS feeds that can contain various information
 type Link struct {
 	URL string
 	Rel string
@@ -123,6 +124,7 @@ func (i *Item) String() string {
 	return i.Format(0)
 }
 
+// Format format an item nicely
 func (i *Item) Format(indent int) string {
 	buf := new(bytes.Buffer)
 	single := strings.Repeat("\t", indent)
@@ -152,18 +154,20 @@ func (i *Item) Format(indent int) string {
 	return buf.String()
 }
 
+// Enclosure holds enclosure data
 type Enclosure struct {
-	Url    string `json:"url"`
+	URL    string `json:"url"`
 	Type   string `json:"type"`
 	Length string `json:"length"`
 }
 
+// Get returns an io.Reader for the data held by the Enclosure
 func (e *Enclosure) Get() (io.ReadCloser, error) {
-	if e == nil || e.Url == "" {
+	if e == nil || e.URL == "" {
 		return nil, errors.New("No enclosure")
 	}
 
-	res, err := http.Get(e.Url)
+	res, err := http.Get(e.URL)
 	if err != nil {
 		return nil, err
 	}

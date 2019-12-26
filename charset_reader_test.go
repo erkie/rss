@@ -66,7 +66,7 @@ func parseTestCase(fileName string) ([]byte, http.Header) {
 }
 
 // Use this when developing more tests
-func downloadUrlAsTestCase(url string, fileName string) {
+func downloadURLAsTestCase(url string, fileName string) {
 	response, err := http.Get(url)
 	if err != nil {
 		log.Fatalln("Could not download", url, "due to", err)

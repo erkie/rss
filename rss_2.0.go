@@ -18,7 +18,7 @@ func parseRSS2(data []byte) (*Feed, error) {
 		return nil, err
 	}
 	if feed.Channel == nil {
-		return nil, fmt.Errorf("Error: no channel found in %q.", string(data))
+		return nil, fmt.Errorf("Error: no channel found in %q", string(data))
 	}
 	channel := feed.Channel
 
@@ -155,7 +155,7 @@ type rss2_0Item struct {
 
 type rss2_0Enclosure struct {
 	XMLName xml.Name `xml:"enclosure"`
-	Url     string   `xml:"url,attr"`
+	URL     string   `xml:"url,attr"`
 	Type    string   `xml:"type,attr"`
 	Length  string   `xml:"length,attr"`
 }
@@ -174,7 +174,7 @@ type rss2_0Link struct {
 
 func (r *rss2_0Enclosure) Enclosure() *Enclosure {
 	out := new(Enclosure)
-	out.Url = strings.TrimSpace(r.Url)
+	out.URL = strings.TrimSpace(r.URL)
 	out.Type = r.Type
 	out.Length = r.Length
 	return out

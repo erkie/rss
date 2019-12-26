@@ -145,13 +145,14 @@ type rss1_0Item struct {
 	PubDate     string            `xml:"pubDate"`
 	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
+	RDFAbout    string            `xml:"rdf:about,attr"`
 	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
 	Media       []rss1_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
 }
 
 type rss1_0Enclosure struct {
 	XMLName xml.Name `xml:"enclosure"`
-	Url     string   `xml:"resource,attr"`
+	URL     string   `xml:"resource,attr"`
 	Type    string   `xml:"type,attr"`
 	Length  string   `xml:"length,attr"`
 }
@@ -170,7 +171,7 @@ type rss1_0Link struct {
 
 func (r *rss1_0Enclosure) Enclosure() *Enclosure {
 	out := new(Enclosure)
-	out.Url = r.Url
+	out.URL = r.URL
 	out.Type = r.Type
 	out.Length = r.Length
 	return out
