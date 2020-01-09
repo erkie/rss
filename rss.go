@@ -109,15 +109,14 @@ func (f *Feed) String() string {
 
 // Item represents a single story.
 type Item struct {
-	Title      string       `json:"title"`
-	Summary    string       `json:"summary"`
-	Content    string       `json:"content"`
-	Category   string       `json:"category"`
-	Link       string       `json:"link"`
-	Date       time.Time    `json:"date"`
-	ID         string       `json:"id"`
-	Enclosures []*Enclosure `json:"enclosures"`
-	Read       bool         `json:"read"`
+	Title      string            `json:"title"`
+	Summary    string            `json:"summary"`
+	Content    string            `json:"content"`
+	Category   string            `json:"category"`
+	Link       string            `json:"link"`
+	Date       time.Time         `json:"date"`
+	ID         string            `json:"id"`
+	Enclosures []*Enclosure      `json:"enclosures"`
 }
 
 func (i *Item) String() string {
@@ -138,7 +137,6 @@ func (i *Item) Format(indent int) string {
 		fmt.Fprintf(w, "\xff%s\xffLink:\t%s\n", double, i.Link)
 		fmt.Fprintf(w, "\xff%s\xffDate:\t%s\n", double, i.Date.Format(DATE))
 		fmt.Fprintf(w, "\xff%s\xffID:\t%s\n", double, i.ID)
-		fmt.Fprintf(w, "\xff%s\xffRead:\t%v\n", double, i.Read)
 		fmt.Fprintf(w, "\xff%s\xffContent:\t%q\n", double, i.Content)
 		fmt.Fprintf(w, "\xff%s\xff}\n", single)
 		w.Flush()
@@ -148,7 +146,6 @@ func (i *Item) Format(indent int) string {
 		fmt.Fprintf(w, "%s%q\n", double, i.Link)
 		fmt.Fprintf(w, "%s%s\n", double, i.Date.Format(DATE))
 		fmt.Fprintf(w, "%s%q\n", double, i.ID)
-		fmt.Fprintf(w, "%sRead: %v\n", double, i.Read)
 		fmt.Fprintf(w, "%s%q\n", double, i.Content)
 	}
 	return buf.String()
