@@ -117,6 +117,7 @@ type Item struct {
 	Date       time.Time         `json:"date"`
 	ID         string            `json:"id"`
 	Enclosures []*Enclosure      `json:"enclosures"`
+	Meta       map[string]string `json:"meta"`
 }
 
 func (i *Item) String() string {

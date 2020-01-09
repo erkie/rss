@@ -93,6 +93,10 @@ func parseRSS1(data []byte) (*Feed, error) {
 		next.ID = strings.TrimSpace(item.ID)
 		if next.ID == "" && item.RDFAbout != "" {
 			next.ID = strings.TrimSpace(item.RDFAbout)
+			if next.Meta == nil {
+				next.Meta = make(map[string]string)
+			}
+			next.Meta["id_from_rdf_about"] = "1"
 		}
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
