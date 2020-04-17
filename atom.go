@@ -86,6 +86,10 @@ func parseAtom(data []byte) (*Feed, error) {
 			next.Link = next.ID
 		}
 
+		if len(next.Link) == 0 && len(next.Enclosures) > 0 {
+			next.Link = next.Enclosures[0].URL
+		}
+
 		out.Items = append(out.Items, next)
 	}
 

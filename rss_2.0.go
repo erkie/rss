@@ -101,6 +101,9 @@ func parseRSS2(data []byte) (*Feed, error) {
 		if len(next.Link) == 0 && (strings.HasPrefix(next.ID, "http://") || strings.HasPrefix(next.ID, "https://")) {
 			next.Link = next.ID
 		}
+		if len(next.Link) == 0 && len(next.Enclosures) > 0 {
+			next.Link = next.Enclosures[0].URL
+		}
 
 		out.Items = append(out.Items, next)
 	}

@@ -67,3 +67,30 @@ func TestEnclosure(t *testing.T) {
 		}
 	}
 }
+
+func TestEnclosureLink(t *testing.T) {
+	tests := map[string]string{
+		"rss_1.0_enclosurelink":   "http://foo.bar/baz.mp3",
+		"rss_2.0_enclosurelink":   "http://example.com/file.mp3",
+		"rss_2.0-1_enclosurelink": "http://gdb.voanews.com/6C49CA6D-C18D-414D-8A51-2B7042A81010_cx0_cy29_cw0_w800_h450.jpg",
+		"atom_1.0_enclosurelink":  "http://example.org/audio.mp3",
+	}
+
+	for test, want := range tests {
+		data, err := ioutil.ReadFile("testdata/" + test)
+		if err != nil {
+			t.Fatalf("Reading %s: %v", test, err)
+		}
+
+		feed, err := Parse(data, nil, "")
+		if err != nil {
+			t.Fatalf("Parsing %s: %v", test, err)
+		}
+
+		for _, item := range feed.Items {
+			if item.Link != want {
+				t.Errorf("Incorrect link %s != %s on %s", item.Link, want, test)
+			}
+		}
+	}
+}
