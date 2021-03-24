@@ -44,12 +44,9 @@ func parseAtom(data []byte) (*Feed, error) {
 	for _, item := range feed.Items {
 
 		next := new(Item)
-		next.Title = strings.TrimSpace(item.Title)
-		next.Summary = strings.TrimSpace(item.Summary)
-		next.Content = strings.TrimSpace(string(item.Content.CData))
-		if len(next.Content) == 0 {
-			next.Content = strings.TrimSpace(string(item.Content.Content))
-		}
+		next.Title = strings.TrimSpace(item.Title.String())
+		next.Summary = strings.TrimSpace(item.Summary.String())
+		next.Content = strings.TrimSpace(item.Content.String())
 
 		if len(next.Content) == 0 {
 			next.Content = strings.TrimSpace(item.Description)
@@ -120,8 +117,8 @@ type atomFeed struct {
 
 type atomItem struct {
 	XMLName     xml.Name    `xml:"entry"`
-	Title       string      `xml:"title"`
-	Summary     string      `xml:"summary"`
+	Title       atomContent `xml:"title"`
+	Summary     atomContent `xml:"summary"`
 	Content     atomContent `xml:"content"`
 	Description string      `xml:"description"`
 	Links       []atomLink  `xml:"link"`
@@ -134,6 +131,14 @@ type atomItem struct {
 type atomContent struct {
 	Content string `xml:",innerxml"`
 	CData   string `xml:",cdata"`
+}
+
+func (a atomContent) String() string {
+	cData := strings.TrimSpace(a.CData)
+	if cData != "" {
+		return cData
+	}
+	return strings.TrimSpace(a.Content)
 }
 
 type atomLink struct {
