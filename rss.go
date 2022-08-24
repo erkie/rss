@@ -23,7 +23,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 
 	possibleParsers := make([]ParserFunc, 0)
 
-	if strings.Contains(string(data), "\"http://purl.org/rss/1.0/\"") {
+	if strings.Contains(string(data), "\"http://purl.org/rss/1.0/\"") || strings.Contains(string(data), "<rdf:RDF") {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 1.0")
 		}
