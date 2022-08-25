@@ -8,12 +8,15 @@ import (
 	"strings"
 )
 
-func parseRSS1(data []byte) (*Feed, error) {
+func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 	warnings := false
 	feed := rss1_0Feed{}
 	p := xml.NewDecoder(bytes.NewReader(data))
 	p.Strict = false
 	p.CharsetReader = CharsetReader
+	if options.CharsetReader != nil {
+		p.CharsetReader = options.CharsetReader
+	}
 	err := p.Decode(&feed)
 	if err != nil {
 		return nil, err

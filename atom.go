@@ -7,12 +7,15 @@ import (
 	"strings"
 )
 
-func parseAtom(data []byte) (*Feed, error) {
+func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 	warnings := false
 	feed := atomFeed{}
 	p := xml.NewDecoder(bytes.NewReader(data))
 	p.Strict = false
 	p.CharsetReader = CharsetReader
+	if options.CharsetReader != nil {
+		p.CharsetReader = options.CharsetReader
+	}
 	err := p.Decode(&feed)
 	if err != nil {
 		return nil, err

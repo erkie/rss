@@ -11,28 +11,27 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
+	"golang.org/x/net/html/charset"
 	"golang.org/x/text/transform"
-
-	"github.com/axgle/mahonia"
 )
 
 // CharsetReader is a lenient charset reader good for web inputs
-func CharsetReader(charset string, input io.Reader) (io.Reader, error) {
+func CharsetReader(theCharset string, input io.Reader) (io.Reader, error) {
 	discarderReader := validUTF8Discarder{}
-
 	switch {
-	case isCharsetUTF8(charset):
+	case isCharsetUTF8(theCharset):
 		return transform.NewReader(input, discarderReader), nil
 	// Go works really weird with UTF-16
-	case isCharsetUTF16(charset):
+	case isCharsetUTF16(theCharset):
 		return transform.NewReader(input, discarderReader), nil
 	default:
-		if decoder := mahonia.NewDecoder(charset); decoder != nil {
-			return transform.NewReader(decoder.NewReader(input), discarderReader), nil
+		encoding, _ := charset.Lookup(theCharset)
+		if encoding != nil {
+			return transform.NewReader(input, encoding.NewDecoder()), nil
 		}
 	}
 
-	return nil, errors.New("CharsetReader: unexpected charset: " + charset)
+	return nil, errors.New("CharsetReader: unexpected charset: " + theCharset)
 }
 
 func compareStringToStrings(charset string, names []string) bool {
@@ -158,10 +157,12 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 		//     Content-Type: application/rss+xml; Charset=ISO-8859-9
 		// this block would then convert ISO-8859-9 to UTF8 and then run the discarder on the input afterwards
 		if charsetFromHeaders != "" && charsetFromHeaders != "utf-8" && charsetFromHeaders != "utf8" {
-			dec := mahonia.NewDecoder(charsetFromHeaders)
+			dec, _ := charset.Lookup(charsetFromHeaders)
 			if dec != nil {
-				convertedToUtf8 := dec.ConvertString(string(input))
-				input = []byte(convertedToUtf8)
+				encoder := dec.NewDecoder()
+
+				transformer := transform.NewReader(bytes.NewReader(input), encoder)
+				input, _ = ioutil.ReadAll(transformer)
 			}
 		}
 

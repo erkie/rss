@@ -24,7 +24,7 @@ func TestParseCategory(t *testing.T) {
 			t.Fatalf("Reading %s: %v", test, err)
 		}
 
-		feed, err := Parse(data, nil, "")
+		feed, err := Parse(data, ParseOptions{})
 		if err != nil {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}

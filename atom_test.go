@@ -43,7 +43,7 @@ func TestParseContentWithoutCDATA(t *testing.T) {
   </feed>
   `
 
-	feed, err := parseAtom([]byte(doc))
+	feed, err := parseAtom([]byte(doc), ParseOptions{})
 	if err != nil {
 		t.Error("Should not error")
 	}
@@ -94,7 +94,7 @@ func TestParseContentWithCDATA(t *testing.T) {
   </feed>
   `
 
-	feed, err := parseAtom([]byte(doc))
+	feed, err := parseAtom([]byte(doc), ParseOptions{})
 	if err != nil {
 		t.Error("Should not error")
 	}
@@ -142,7 +142,7 @@ func TestParseContentWithoutContent(t *testing.T) {
   </feed>
   `
 
-	feed, err := parseAtom([]byte(doc))
+	feed, err := parseAtom([]byte(doc), ParseOptions{})
 	if err != nil {
 		t.Error("Should not error")
 	}

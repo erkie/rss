@@ -11,19 +11,25 @@ import (
 	"time"
 )
 
+type ParseOptions struct {
+	CharsetReader   func(charset string, input io.Reader) (io.Reader, error)
+	ResponseHeaders http.Header
+	FinalURL        string
+}
+
 // ParserFunc is the interface for a parser
-type ParserFunc func(data []byte) (*Feed, error)
+type ParserFunc func(data []byte, options ParseOptions) (*Feed, error)
 
 // Parse RSS or Atom data.
-func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, error) {
-	data = DiscardInvalidUTF8IfUTF8(data, responseHeaders)
+func Parse(data []byte, options ParseOptions) (*Feed, error) {
+	data = DiscardInvalidUTF8IfUTF8(data, options.ResponseHeaders)
 
 	var feed *Feed
 	var err error
 
 	possibleParsers := make([]ParserFunc, 0)
 
-	if strings.Contains(string(data), "\"http://purl.org/rss/1.0/\"") {
+	if strings.Contains(string(data), "\"http://purl.org/rss/1.0/\"") || strings.Contains(string(data), "<rdf:RDF") {
 		if debug {
 			fmt.Println("[i] Parsing as RSS 1.0")
 		}
@@ -35,7 +41,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 			fmt.Println("[i] Parsing as RSS 2.0")
 		}
 		possibleParsers = append(possibleParsers, parseRSS2)
-		feed, err = parseRSS2(data)
+		feed, err = parseRSS2(data, options)
 	}
 
 	if debug {
@@ -44,7 +50,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 	possibleParsers = append(possibleParsers, parseAtom)
 
 	for _, parser := range possibleParsers {
-		feed, err = parser(data)
+		feed, err = parser(data, options)
 
 		if err == nil {
 			break
@@ -55,7 +61,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 		return nil, err
 	}
 
-	normalizeURLsInFeed(feed, finalURL)
+	normalizeURLsInFeed(feed, options.FinalURL)
 
 	return feed, err
 }
