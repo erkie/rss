@@ -12,6 +12,7 @@ import (
 )
 
 type ParseOptions struct {
+	CharsetReader   func(charset string, input io.Reader) (io.Reader, error)
 	ResponseHeaders http.Header
 	FinalURL        string
 }
