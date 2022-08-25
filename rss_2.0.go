@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func parseRSS2(data []byte) (*Feed, error) {
+func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 	warnings := false
 	feed := rss2_0Feed{}
 	p := xml.NewDecoder(bytes.NewReader(data))

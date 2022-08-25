@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func parseAtom(data []byte) (*Feed, error) {
+func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 	warnings := false
 	feed := atomFeed{}
 	p := xml.NewDecoder(bytes.NewReader(data))

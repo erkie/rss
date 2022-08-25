@@ -18,7 +18,7 @@ func TestParseRDFRSS10(t *testing.T) {
 		t.Fatalf("Reading test file %v", err)
 	}
 
-	feed, err := Parse(data, nil, "")
+	feed, err := Parse(data, ParseOptions{})
 	if err != nil {
 		t.Error("Should not error on parsing", err)
 	}

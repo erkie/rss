@@ -11,12 +11,17 @@ import (
 	"time"
 )
 
+type ParseOptions struct {
+	ResponseHeaders http.Header
+	FinalURL        string
+}
+
 // ParserFunc is the interface for a parser
-type ParserFunc func(data []byte) (*Feed, error)
+type ParserFunc func(data []byte, options ParseOptions) (*Feed, error)
 
 // Parse RSS or Atom data.
-func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, error) {
-	data = DiscardInvalidUTF8IfUTF8(data, responseHeaders)
+func Parse(data []byte, options ParseOptions) (*Feed, error) {
+	data = DiscardInvalidUTF8IfUTF8(data, options.ResponseHeaders)
 
 	var feed *Feed
 	var err error
@@ -35,7 +40,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 			fmt.Println("[i] Parsing as RSS 2.0")
 		}
 		possibleParsers = append(possibleParsers, parseRSS2)
-		feed, err = parseRSS2(data)
+		feed, err = parseRSS2(data, options)
 	}
 
 	if debug {
@@ -44,7 +49,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 	possibleParsers = append(possibleParsers, parseAtom)
 
 	for _, parser := range possibleParsers {
-		feed, err = parser(data)
+		feed, err = parser(data, options)
 
 		if err == nil {
 			break
@@ -55,7 +60,7 @@ func Parse(data []byte, responseHeaders http.Header, finalURL string) (*Feed, er
 		return nil, err
 	}
 
-	normalizeURLsInFeed(feed, finalURL)
+	normalizeURLsInFeed(feed, options.FinalURL)
 
 	return feed, err
 }
