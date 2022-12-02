@@ -143,12 +143,13 @@ func DiscardInvalidUTF8IfUTF8(input []byte, responseHeaders http.Header) []byte 
 	// the Go XML parser wouldn't even attempt to decode unless we decode 16 first
 	// Hopefully a smarter person than me will see this, rage so hard at the stupidity of this fix
 	// and then open an issue letting me know how it's done
-	if isCharsetUTF16(charsetFromHeaders) {
-		utf16DecodedInput, err := decodeUTF16(input)
-		if err == nil {
-			return utf16DecodedInput
-		}
-	}
+	// Disable for now
+	// if isCharsetUTF16(charsetFromHeaders) {
+	// 	utf16DecodedInput, err := decodeUTF16(input)
+	// 	if err == nil {
+	// 		return utf16DecodedInput
+	// 	}
+	// }
 
 	if hasUTF8.MatchString(firstChunk) || !hasEncodingAtAll.MatchString(firstChunk) {
 		// Some feeds respond with a <?xml encoding=utf8 even though their server
