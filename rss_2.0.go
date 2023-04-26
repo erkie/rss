@@ -41,14 +41,19 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 		}
 	}
 
-	if channel.Items == nil {
-		channel.Items = make([]rss2_0Item, 0)
+	itemsToUse := channel.Items
+	if itemsToUse == nil {
+		itemsToUse = feed.Items
 	}
 
-	out.Items = make([]*Item, 0, len(channel.Items))
+	if itemsToUse == nil {
+		itemsToUse = make([]rss2_0Item, 0)
+	}
+
+	out.Items = make([]*Item, 0, len(itemsToUse))
 
 	// Process items.
-	for _, item := range channel.Items {
+	for _, item := range itemsToUse {
 
 		if item.ID == "" {
 			if len(item.Links) == 0 && len(item.Description) == 0 && len(item.Content) == 0 {
@@ -129,6 +134,7 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 type rss2_0Feed struct {
 	XMLName xml.Name       `xml:"rss"`
 	Channel *rss2_0Channel `xml:"channel"`
+	Items   []rss2_0Item   `xml:"item"`
 }
 
 type rss2_0Channel struct {
