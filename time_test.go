@@ -59,11 +59,13 @@ func TestParser(t *testing.T) {
 		"2016-06-28T00:00:00",
 		"Fri, 02 Sep 2022 02:38:39 PDT",
 		"Tue, 14 Mar 2023 14:05:19 Z",
+		"09-Jan-2024 14:00:08",
 	}
 	res := []time.Time{
 		time.Date(2016, 6, 28, 0, 0, 0, 0, time.UTC),
 		time.Date(2022, 9, 2, 2, 38, 39, 0, time.UTC),
 		time.Date(2023, 3, 14, 14, 5, 19, 0, time.UTC),
+		time.Date(2024, 1, 9, 14, 0, 8, 0, time.UTC),
 	}
 	for i, form := range s {
 		tv := parseTime(form)

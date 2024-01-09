@@ -34,6 +34,7 @@ var TimeLayouts = []string{
 	time.RFC3339,
 	time.RFC3339Nano,
 	"2006-01-02T15:04:05",
+	"02-Jan-2006 15:04:05",
 }
 
 func parseTime(s string) time.Time {
