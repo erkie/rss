@@ -55,22 +55,30 @@ func TestParseWithTwoDigitYear(t *testing.T) {
 }
 
 func TestParser(t *testing.T) {
-	s := []string{
+	examples := []string{
 		"2016-06-28T00:00:00",
 		"Fri, 02 Sep 2022 02:38:39 PDT",
 		"Tue, 14 Mar 2023 14:05:19 Z",
 		"09-Jan-2024 14:00:08",
+		"Tue, 11 Jun 2024 12:13:18 PDT",
+		"Tue, 13 Jun 2024 12:13:18 PDT",
 	}
-	res := []time.Time{
+	expecteds := []time.Time{
 		time.Date(2016, 6, 28, 0, 0, 0, 0, time.UTC),
 		time.Date(2022, 9, 2, 2, 38, 39, 0, time.UTC),
 		time.Date(2023, 3, 14, 14, 5, 19, 0, time.UTC),
 		time.Date(2024, 1, 9, 14, 0, 8, 0, time.UTC),
+		time.Date(2024, 6, 11, 12, 13, 18, 0, time.UTC),
+		time.Date(2024, 6, 13, 19, 13, 18, 0, time.UTC),
 	}
-	for i, form := range s {
+	for i, form := range examples {
 		tv := parseTime(form)
-		if tv.UTC() != res[i] {
-			t.Errorf("expected no err and year to be %s = %s", res[i].String(), tv.UTC().String())
+		if tv.UTC() != expecteds[i] {
+			t.Errorf(
+				"expected no err and year to be (expected) %s = %s (received)",
+				expecteds[i].String(),
+				tv.UTC().String(),
+			)
 		}
 	}
 }

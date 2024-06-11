@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+var pdtFixTimeCutOff = time.Date(2024, 6, 12, 12, 0, 0, 0, time.UTC)
+
 // TimeLayouts is contains a list of time.Parse() layouts that are used in
 // attempts to convert item.Date and item.PubDate string to time.Time values.
 // The layouts are attempted in ascending order until either time.Parse()
@@ -46,7 +48,7 @@ func parseTime(s string) time.Time {
 	for _, layout := range TimeLayouts {
 		t, e = time.Parse(layout, s)
 		if e == nil {
-			return t
+			return fixAmbiguousTimeLocation(t)
 		}
 	}
 
@@ -55,4 +57,19 @@ func parseTime(s string) time.Time {
 
 func defaultTime() time.Time {
 	return time.Unix(0, 0)
+}
+
+func fixAmbiguousTimeLocation(t time.Time) time.Time {
+	if t.Before(pdtFixTimeCutOff) {
+		return t
+	}
+
+	switch t.Location().String() {
+	case "PDT":
+		return t.Add(7 * time.Hour)
+	case "PST":
+		return t.Add(8 * time.Hour)
+	default:
+		return t
+	}
 }
