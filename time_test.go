@@ -62,6 +62,7 @@ func TestParser(t *testing.T) {
 		"09-Jan-2024 14:00:08",
 		"Tue, 11 Jun 2024 12:13:18 PDT",
 		"Tue, 13 Jun 2024 12:13:18 PDT",
+		"Tue, 13 Jun 2024 06:15:00 EDT",
 	}
 	expecteds := []time.Time{
 		time.Date(2016, 6, 28, 0, 0, 0, 0, time.UTC),
@@ -70,14 +71,16 @@ func TestParser(t *testing.T) {
 		time.Date(2024, 1, 9, 14, 0, 8, 0, time.UTC),
 		time.Date(2024, 6, 11, 12, 13, 18, 0, time.UTC),
 		time.Date(2024, 6, 13, 19, 13, 18, 0, time.UTC),
+		time.Date(2024, 6, 13, 10, 15, 0, 0, time.UTC),
 	}
 	for i, form := range examples {
-		tv := parseTime(form)
-		if tv.UTC() != expecteds[i] {
+		receivedTime := parseTime(form)
+		if receivedTime.UTC() != expecteds[i] {
 			t.Errorf(
-				"expected no err and year to be (expected) %s = %s (received)",
+				"%d: expected no err and year to be (expected) %s = %s (received)",
+				i+1,
 				expecteds[i].String(),
-				tv.UTC().String(),
+				receivedTime.UTC().String(),
 			)
 		}
 	}

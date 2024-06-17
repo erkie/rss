@@ -7,6 +7,25 @@ import (
 
 var pdtFixTimeCutOff = time.Date(2024, 6, 12, 12, 0, 0, 0, time.UTC)
 
+// This map contains the incorrect timezone offset in seconds for the timezone
+// Based on timezones we've seen in the wild
+var timeZoneMap = map[string]int{
+	"PDT":  -7 * 60 * 60,  // -7 hours in seconds
+	"PST":  -8 * 60 * 60,  // -8 hours in seconds
+	"EDT":  -4 * 60 * 60,  // -4 hours in seconds
+	"EST":  -5 * 60 * 60,  // -5 hours in seconds
+	"CDT":  -5 * 60 * 60,  // -5 hours in seconds
+	"CST":  -6 * 60 * 60,  // -6 hours in seconds
+	"MDT":  -6 * 60 * 60,  // -6 hours in seconds
+	"MST":  -7 * 60 * 60,  // -7 hours in seconds
+	"GMT":  0 * 60 * 60,   // 0 hours in seconds
+	"BST":  1 * 60 * 60,   // 1 hour in seconds
+	"AKDT": -8 * 60 * 60,  // -8 hours in seconds
+	"AKST": -9 * 60 * 60,  // -9 hours in seconds
+	"HADT": -9 * 60 * 60,  // -9 hours in seconds
+	"HAST": -10 * 60 * 60, // -10 hours in seconds
+}
+
 // TimeLayouts is contains a list of time.Parse() layouts that are used in
 // attempts to convert item.Date and item.PubDate string to time.Time values.
 // The layouts are attempted in ascending order until either time.Parse()
@@ -59,17 +78,17 @@ func defaultTime() time.Time {
 	return time.Unix(0, 0)
 }
 
+// This post explains why this is needed: https://stackoverflow.com/a/66606191/224732
 func fixAmbiguousTimeLocation(t time.Time) time.Time {
 	if t.Before(pdtFixTimeCutOff) {
 		return t
 	}
 
-	switch t.Location().String() {
-	case "PDT":
-		return t.Add(7 * time.Hour)
-	case "PST":
-		return t.Add(8 * time.Hour)
-	default:
+	offset, exists := timeZoneMap[t.Location().String()]
+	if !exists {
 		return t
 	}
+
+	localTime := t.Add(-time.Duration(offset) * time.Second)
+	return localTime
 }
