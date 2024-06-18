@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var pdtFixTimeCutOff = time.Date(2024, 6, 12, 12, 0, 0, 0, time.UTC)
+var pdtFixTimeCutOff = time.Date(2024, 6, 19, 10, 0, 0, 0, time.UTC)
 
 // This map contains the incorrect timezone offset in seconds for the timezone
 // Based on timezones we've seen in the wild
