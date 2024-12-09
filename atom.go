@@ -50,17 +50,14 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 		next.Title = strings.TrimSpace(item.Title.String())
 		next.Summary = strings.TrimSpace(item.Summary.String())
 		next.Content = strings.TrimSpace(item.Content.String())
+		next.Media = item.Media
 
 		if len(next.Content) == 0 {
 			next.Content = strings.TrimSpace(item.Description)
 		}
 
-		if next.Content == "" && next.Summary == "" && len(item.Media) > 0 {
-			for _, media := range item.Media {
-				if media.Description != "" {
-					next.Content = media.Description
-				}
-			}
+		if next.Content == "" && next.Summary == "" && item.Media.IsPresent() {
+			next.Content = item.Media.Description()
 		}
 
 		next.Date = defaultTime()
@@ -128,7 +125,8 @@ type atomItem struct {
 	Published   string      `xml:"published"`
 	Date        string      `xml:"updated"`
 	ID          string      `xml:"id"`
-	Media       []atomMedia `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
+
+	Media
 }
 
 type atomContent struct {
@@ -150,8 +148,4 @@ type atomLink struct {
 	Type     string `xml:"type,attr"`
 	Length   string `xml:"length,attr"`
 	Contents string `xml:",chardata"`
-}
-
-type atomMedia struct {
-	Description string `xml:"description"`
 }

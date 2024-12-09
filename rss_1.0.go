@@ -78,13 +78,10 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 
 		next.Title = strings.TrimSpace(item.Title)
 		next.Content = strings.TrimSpace(item.Content)
+		next.Media = item.Media
 
-		if next.Content == "" && len(item.Media) > 0 {
-			for _, media := range item.Media {
-				if media.Description != "" {
-					next.Content = media.Description
-				}
-			}
+		if next.Content == "" && item.Media.IsPresent() {
+			next.Content = item.Media.Description()
 		}
 
 		next.Date = defaultTime()
@@ -200,7 +197,7 @@ type rss1_0Item struct {
 	ID          string            `xml:"guid"`
 	RDFAbout    string            `xml:"about,attr"`
 	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
-	Media       []rss1_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
+	Media
 }
 
 type rss1_0Enclosure struct {
@@ -208,10 +205,6 @@ type rss1_0Enclosure struct {
 	URL     string   `xml:"resource,attr"`
 	Type    string   `xml:"type,attr"`
 	Length  string   `xml:"length,attr"`
-}
-
-type rss1_0Media struct {
-	Description string `xml:"description"`
 }
 
 type rss1_0Link struct {

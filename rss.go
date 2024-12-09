@@ -124,6 +124,7 @@ type Item struct {
 	ID         string            `json:"id"`
 	Enclosures []*Enclosure      `json:"enclosures"`
 	Meta       map[string]string `json:"meta"`
+	Media
 }
 
 func (i *Item) String() string {

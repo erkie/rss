@@ -84,13 +84,10 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 		next.Title = strings.TrimSpace(item.Title)
 		next.Summary = strings.TrimSpace(item.Description)
 		next.Content = strings.TrimSpace(item.Content)
+		next.Media = item.Media
 
-		if next.Content == "" && len(item.Media) > 0 {
-			for _, media := range item.Media {
-				if media.Description != "" {
-					next.Content = media.Description
-				}
-			}
+		if next.Content == "" && item.Media.IsPresent() {
+			next.Content = item.Media.Description()
 		}
 
 		next.Date = defaultTime()
@@ -161,7 +158,7 @@ type rss2_0Item struct {
 	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
 	Enclosures  []rss2_0Enclosure `xml:"enclosure"`
-	Media       []rss2_0Media     `xml:"group"` // <media:group> from http://search.yahoo.com/mrss/
+	Media
 }
 
 type rss2_0Enclosure struct {
