@@ -21,8 +21,7 @@
     <updated>2024-12-07T10:52:47+00:00</updated>
     <media:group>
       <media:title>title!</media:title>
-      <media:content url="https://www.videos.com/video.mp4" type="video/mp4"
-        width="640" height="390" />
+      <media:content url="https://www.videos.com/video.mp4" type="video/mp4" width="640" height="390" />
       <media:thumbnail url="https://www.videos.com/video_thumb.jpg" width="400" height="300" />
       <media:description>description!</media:description>
       <media:community>

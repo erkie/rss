@@ -52,9 +52,7 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 
 	out.Items = make([]*Item, 0, len(itemsToUse))
 
-	// Process items.
 	for _, item := range itemsToUse {
-
 		if item.ID == "" {
 			if len(item.Links) == 0 && len(item.Description) == 0 && len(item.Content) == 0 {
 				if debug {
@@ -84,18 +82,8 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 		next.Title = strings.TrimSpace(item.Title)
 		next.Summary = strings.TrimSpace(item.Description)
 		next.Content = strings.TrimSpace(item.Content)
-		next.Media = item.Media
+		next.SetMetadata(item.Metadata)
 
-		if next.Content == "" && item.Media.IsPresent() {
-			next.Content = item.Media.Description()
-		}
-
-		next.Date = defaultTime()
-		if item.Date != "" {
-			next.Date = parseTime(item.Date)
-		} else if item.PubDate != "" {
-			next.Date = parseTime(item.PubDate)
-		}
 		next.ID = strings.TrimSpace(item.ID)
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
@@ -135,15 +123,15 @@ type rss2_0Feed struct {
 }
 
 type rss2_0Channel struct {
-	XMLName     xml.Name          `xml:"channel"`
-	Title       string            `xml:"title"`
-	Description string            `xml:"description"`
-	Links       []rss2_0Link      `xml:"link"`
-	Items       []rss2_0Item      `xml:"item"`
-	MinsToLive  string            `xml:"ttl"`
-	SkipHours   []string          `xml:"skipHours>hour"`
-	SkipDays    []string          `xml:"skipDays>day"`
-	Categories  []genericCategory `xml:"category"`
+	XMLName     xml.Name     `xml:"channel"`
+	Title       string       `xml:"title"`
+	Description string       `xml:"description"`
+	Links       []rss2_0Link `xml:"link"`
+	Items       []rss2_0Item `xml:"item"`
+	MinsToLive  string       `xml:"ttl"`
+	SkipHours   []string     `xml:"skipHours>hour"`
+	SkipDays    []string     `xml:"skipDays>day"`
+	Categories  []Category   `xml:"category"`
 }
 
 type rss2_0Item struct {
@@ -151,14 +139,12 @@ type rss2_0Item struct {
 	Title       string            `xml:"title"`
 	Description string            `xml:"description"`
 	Content     string            `xml:"encoded"`
-	Category    string            `xml:"category"`
 	Links       []string          `xml:"link"`
 	Href        string            `xml:"href"` // Non-standard but found in the wild...
-	PubDate     string            `xml:"pubDate"`
-	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
 	Enclosures  []rss2_0Enclosure `xml:"enclosure"`
-	Media
+
+	Metadata
 }
 
 type rss2_0Enclosure struct {
@@ -166,10 +152,6 @@ type rss2_0Enclosure struct {
 	URL     string   `xml:"url,attr"`
 	Type    string   `xml:"type,attr"`
 	Length  string   `xml:"length,attr"`
-}
-
-type rss2_0Media struct {
-	Description string `xml:"description"`
 }
 
 type rss2_0Link struct {

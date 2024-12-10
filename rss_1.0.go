@@ -78,18 +78,8 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 
 		next.Title = strings.TrimSpace(item.Title)
 		next.Content = strings.TrimSpace(item.Content)
-		next.Media = item.Media
+		next.SetMetadata(item.Metadata)
 
-		if next.Content == "" && item.Media.IsPresent() {
-			next.Content = item.Media.Description()
-		}
-
-		next.Date = defaultTime()
-		if item.Date != "" {
-			next.Date = parseTime(item.Date)
-		} else if item.PubDate != "" {
-			next.Date = parseTime(item.PubDate)
-		}
 		next.ID = strings.TrimSpace(item.ID)
 		if next.ID == "" && item.RDFAbout != "" {
 			next.ID = strings.TrimSpace(item.RDFAbout)
@@ -170,15 +160,15 @@ type rss1_0Feed struct {
 }
 
 type rss1_0Channel struct {
-	XMLName     xml.Name          `xml:"channel"`
-	Title       string            `xml:"title"`
-	Description string            `xml:"description"`
-	Links       []rss1_0Link      `xml:"link"`
-	MinsToLive  string            `xml:"ttl"`
-	SkipHours   []string          `xml:"skipHours>hour"`
-	SkipDays    []string          `xml:"skipDays>day"`
-	Categories  []genericCategory `xml:"category"`
-	Sequence    []rss1_0Sequence  `xml:"items>Seq>li"`
+	XMLName     xml.Name         `xml:"channel"`
+	Title       string           `xml:"title"`
+	Description string           `xml:"description"`
+	Links       []rss1_0Link     `xml:"link"`
+	MinsToLive  string           `xml:"ttl"`
+	SkipHours   []string         `xml:"skipHours>hour"`
+	SkipDays    []string         `xml:"skipDays>day"`
+	Categories  []Category       `xml:"category"`
+	Sequence    []rss1_0Sequence `xml:"items>Seq>li"`
 }
 
 type rss1_0Sequence struct {
@@ -192,12 +182,11 @@ type rss1_0Item struct {
 	Description string            `xml:"description"`
 	Content     string            `xml:"encoded"`
 	Links       []string          `xml:"link"`
-	PubDate     string            `xml:"pubDate"`
-	Date        string            `xml:"date"`
 	ID          string            `xml:"guid"`
 	RDFAbout    string            `xml:"about,attr"`
 	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
-	Media
+
+	Metadata
 }
 
 type rss1_0Enclosure struct {

@@ -1,33 +1,61 @@
 package rss
 
-import "strings"
+import "time"
 
-type genericCategory struct {
-	Term       string `xml:"term,attr"`
-	TermInBody string `xml:",chardata"`
+type Metadata struct {
+	Authors    []Author   `xml:"author"`
+	Categories []Category `xml:"category"`
+
+	MediaGroups  []MediaGroup   `xml:"group"`
+	MediaContent []MediaContent `xml:"content"`
+
+	PubDate   string `xml:"pubDate"`
+	Date      string `xml:"date"`
+	Published string `xml:"published"`
+	Updated   string `xml:"updated"`
 }
 
-func fetchCategoriesFromArray(categories []genericCategory, splitBySlashes bool) []string {
-	var ret []string
-	for _, category := range categories {
-		var theTerm string
-		if category.Term == "" && category.TermInBody != "" {
-			theTerm = category.TermInBody
-		} else if category.Term != "" {
-			theTerm = category.Term
-		}
+func (m *Metadata) PublishedDate() time.Time {
+	date := defaultTime()
 
-		if theTerm != "" {
-			if splitBySlashes {
-				pieces := strings.Split(theTerm, "/")
-				ret = append(ret, pieces...)
-			} else {
-				ret = append(ret, theTerm)
-			}
-		}
+	if m.PubDate != "" {
+		date = parseTime(m.PubDate)
 	}
-	for index, val := range ret {
-		ret[index] = strings.TrimSpace(val)
+
+	if date.IsZero() && m.Published != "" {
+		date = parseTime(m.Published)
+	}
+
+	if date.IsZero() && m.Date != "" {
+		date = parseTime(m.Date)
+	}
+
+	if date.IsZero() && m.Updated != "" {
+		date = parseTime(m.Updated)
+	}
+
+	return date
+}
+
+func (m *Metadata) CategoriesAsString() []string {
+	ret := make([]string, len(m.Categories))
+	for i, category := range m.Categories {
+		ret[i] = category.Contents
 	}
 	return ret
+}
+
+func (m *Metadata) MediaContents() string {
+	for _, media := range m.MediaGroups {
+		if media.Description != nil {
+			return media.Description.Content
+		}
+	}
+
+	for _, media := range m.MediaContent {
+		if media.Description != nil {
+			return media.Description.Content
+		}
+	}
+	return ""
 }

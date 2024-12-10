@@ -1,0 +1,40 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0"
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Feed name</title>
+    <description>Example description</description>
+    <link>https://example.com/profile</link>
+    <image>
+      <url>https://example.com/profile.image.jpg</url>
+      <title>Image title</title>
+      <link>https://example.com/profile</link>
+    </image>
+    <lastBuildDate>Mon, 09 Dec 2024 13:36:48 +0000</lastBuildDate>
+    <webfeeds:icon>https://example.com/profile.image.jpg</webfeeds:icon>
+    <generator>Mastodon v4.4.0-nightly.2024-12-09</generator>
+    <item>
+      <guid isPermaLink="true">https://example.com/123</guid>
+      <link>https://example.com/123</link>
+      <pubDate>Mon, 09 Dec 2024 13:36:48 +0000</pubDate>
+      <description>
+        description1
+      </description>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://example.com/abc</guid>
+      <link>https://example.com/abc</link>
+      <pubDate>Sat, 07 Dec 2024 18:47:08 +0000</pubDate>
+      <description>description2</description>
+      <media:content url="https://example.com/image.jpeg" type="image/jpeg" fileSize="362243"
+        medium="image">
+        <media:rating scheme="urn:simple">nonadult</media:rating>
+        <media:description type="plain">media:description</media:description>
+      </media:content>
+      <category>category1</category>
+      <category>category2</category>
+      <category>category3</category>
+    </item>
+  </channel>
+</rss>

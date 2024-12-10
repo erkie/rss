@@ -1,7 +1,7 @@
 package rss
 
 import (
-	"io/ioutil"
+	"os"
 	"strings"
 	"testing"
 )
@@ -19,7 +19,7 @@ func TestParseCategory(t *testing.T) {
 	}
 
 	for test, want := range tests {
-		data, err := ioutil.ReadFile("testdata/" + test)
+		data, err := os.ReadFile("testdata/" + test)
 		if err != nil {
 			t.Fatalf("Reading %s: %v", test, err)
 		}

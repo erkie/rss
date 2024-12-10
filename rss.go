@@ -118,13 +118,23 @@ type Item struct {
 	Title      string            `json:"title"`
 	Summary    string            `json:"summary"`
 	Content    string            `json:"content"`
-	Category   string            `json:"category"`
 	Link       string            `json:"link"`
 	Date       time.Time         `json:"date"`
 	ID         string            `json:"id"`
 	Enclosures []*Enclosure      `json:"enclosures"`
 	Meta       map[string]string `json:"meta"`
-	Media
+
+	Metadata
+}
+
+func (i *Item) SetMetadata(metadata Metadata) {
+	i.Metadata = metadata
+
+	if i.Content == "" {
+		i.Content = i.Metadata.MediaContents()
+	}
+
+	i.Date = metadata.PublishedDate()
 }
 
 func (i *Item) String() string {
@@ -141,7 +151,7 @@ func (i *Item) Format(indent int) string {
 		fmt.Fprintf(w, "\xff%s\xffItem {\n", single)
 		fmt.Fprintf(w, "\xff%s\xffTitle:\t%q\n", double, i.Title)
 		fmt.Fprintf(w, "\xff%s\xffSummary:\t%q\n", double, i.Summary)
-		fmt.Fprintf(w, "\xff%s\xffCategory:\t%q\n", double, i.Category)
+		fmt.Fprintf(w, "\xff%s\xffCategory:\t%q\n", double, strings.Join(i.CategoriesAsString(), ", "))
 		fmt.Fprintf(w, "\xff%s\xffLink:\t%s\n", double, i.Link)
 		fmt.Fprintf(w, "\xff%s\xffDate:\t%s\n", double, i.Date.Format(DATE))
 		fmt.Fprintf(w, "\xff%s\xffID:\t%s\n", double, i.ID)

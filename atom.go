@@ -45,27 +45,17 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 
 	// Process items.
 	for _, item := range feed.Items {
-
 		next := new(Item)
 		next.Title = strings.TrimSpace(item.Title.String())
 		next.Summary = strings.TrimSpace(item.Summary.String())
 		next.Content = strings.TrimSpace(item.Content.String())
-		next.Media = item.Media
 
-		if len(next.Content) == 0 {
+		if next.Content == "" {
 			next.Content = strings.TrimSpace(item.Description)
 		}
 
-		if next.Content == "" && next.Summary == "" && item.Media.IsPresent() {
-			next.Content = item.Media.Description()
-		}
+		next.SetMetadata(item.Metadata)
 
-		next.Date = defaultTime()
-		if item.Published != "" {
-			next.Date = parseTime(item.Published)
-		} else if item.Date != "" {
-			next.Date = parseTime(item.Date)
-		}
 		next.ID = strings.TrimSpace(item.ID)
 		for _, link := range item.Links {
 			if link.Rel == "alternate" || link.Rel == "" {
@@ -106,13 +96,13 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 }
 
 type atomFeed struct {
-	XMLName     xml.Name          `xml:"feed"`
-	Title       string            `xml:"title"`
-	Description string            `xml:"subtitle"`
-	Links       []atomLink        `xml:"link"`
-	Items       []atomItem        `xml:"entry"`
-	Updated     string            `xml:"updated"`
-	Categories  []genericCategory `xml:"category"`
+	XMLName     xml.Name   `xml:"feed"`
+	Title       string     `xml:"title"`
+	Description string     `xml:"subtitle"`
+	Links       []atomLink `xml:"link"`
+	Items       []atomItem `xml:"entry"`
+	Updated     string     `xml:"updated"`
+	Categories  []Category `xml:"category"`
 }
 
 type atomItem struct {
@@ -122,11 +112,10 @@ type atomItem struct {
 	Content     atomContent `xml:"content"`
 	Description string      `xml:"description"`
 	Links       []atomLink  `xml:"link"`
-	Published   string      `xml:"published"`
-	Date        string      `xml:"updated"`
-	ID          string      `xml:"id"`
 
-	Media
+	ID string `xml:"id"`
+
+	Metadata
 }
 
 type atomContent struct {
