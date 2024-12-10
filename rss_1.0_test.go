@@ -24,7 +24,7 @@ func TestParseRDFRSS10(t *testing.T) {
 	}
 
 	for index, expectedItem := range res {
-		title := feed.Items[index].Title
+		title := feed.Items[index].Title.String()
 		link := feed.Items[index].Link
 		id := feed.Items[index].ID
 		if title != expectedItem.Title {

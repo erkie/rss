@@ -3,7 +3,7 @@ package rss
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -41,7 +41,7 @@ func TestParseUTF16LE(t *testing.T) {
 			continue
 		}
 
-		if feed.Items[0].Title != testCase.ExpectedTitle {
+		if feed.Items[0].Title.String() != testCase.ExpectedTitle {
 			t.Error("Incorrect title")
 		}
 		if feed.Items[0].Summary != testCase.ExpectedContent {
@@ -51,8 +51,8 @@ func TestParseUTF16LE(t *testing.T) {
 }
 
 func parseTestCase(fileName string) ([]byte, http.Header) {
-	contents, _ := ioutil.ReadFile(fileName + ".response")
-	headers, _ := ioutil.ReadFile(fileName + ".headers")
+	contents, _ := os.ReadFile(fileName + ".response")
+	headers, _ := os.ReadFile(fileName + ".headers")
 
 	responseHeaders := http.Header{}
 
@@ -90,7 +90,7 @@ func downloadURLAsTestCase(url string, fileName string) {
 
 	headerWriter.Flush()
 
-	bodyBytes, _ := ioutil.ReadAll(response.Body)
+	bodyBytes, _ := io.ReadAll(response.Body)
 	responseWriter.Write(bodyBytes)
 
 	responseWriter.Flush()

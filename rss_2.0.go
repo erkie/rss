@@ -27,7 +27,7 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 
 	out := new(Feed)
 	out.Type = "rss2.0"
-	out.Title = strings.TrimSpace(channel.Title)
+	out.Title = channel.Title
 	out.Description = strings.TrimSpace(channel.Description)
 	out.Categories = fetchCategoriesFromArray(channel.Categories, true)
 	for _, link := range channel.Links {
@@ -64,7 +64,12 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 			}
 		}
 
-		next := new(Item)
+		next := &Item{
+			ID:      strings.TrimSpace(item.ID),
+			Title:   item.Title,
+			Summary: strings.TrimSpace(item.Description),
+			Content: strings.TrimSpace(item.Content),
+		}
 
 		if item.Links != nil {
 			for _, link := range item.Links {
@@ -79,24 +84,16 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 			next.Link = strings.TrimSpace(item.Href)
 		}
 
-		next.Title = strings.TrimSpace(item.Title)
-		next.Summary = strings.TrimSpace(item.Description)
-		next.Content = strings.TrimSpace(item.Content)
 		next.SetMetadata(item.Metadata)
 
-		next.ID = strings.TrimSpace(item.ID)
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
 			for i := range item.Enclosures {
 				next.Enclosures[i] = item.Enclosures[i].Enclosure()
 			}
 		}
-		if len(next.Link) == 0 && (strings.HasPrefix(next.ID, "http://") || strings.HasPrefix(next.ID, "https://")) {
-			next.Link = next.ID
-		}
-		if len(next.Link) == 0 && len(next.Enclosures) > 0 {
-			next.Link = next.Enclosures[0].URL
-		}
+
+		next.EnsureLinks()
 
 		out.Items = append(out.Items, next)
 	}
@@ -124,7 +121,7 @@ type rss2_0Feed struct {
 
 type rss2_0Channel struct {
 	XMLName     xml.Name     `xml:"channel"`
-	Title       string       `xml:"title"`
+	Title       Title        `xml:"title"`
 	Description string       `xml:"description"`
 	Links       []rss2_0Link `xml:"link"`
 	Items       []rss2_0Item `xml:"item"`
@@ -136,7 +133,7 @@ type rss2_0Channel struct {
 
 type rss2_0Item struct {
 	XMLName     xml.Name          `xml:"item"`
-	Title       string            `xml:"title"`
+	Title       Title             `xml:"title"`
 	Description string            `xml:"description"`
 	Content     string            `xml:"encoded"`
 	Links       []string          `xml:"link"`

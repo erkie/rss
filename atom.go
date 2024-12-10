@@ -23,7 +23,7 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 
 	out := new(Feed)
 	out.Type = "atom"
-	out.Title = strings.TrimSpace(feed.Title)
+	out.Title = feed.Title
 	out.Description = strings.TrimSpace(feed.Description)
 	for _, link := range feed.Links {
 		if link.Rel == "alternate" || link.Rel == "" {
@@ -43,12 +43,13 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 
 	out.Items = make([]*Item, 0, len(feed.Items))
 
-	// Process items.
 	for _, item := range feed.Items {
-		next := new(Item)
-		next.Title = strings.TrimSpace(item.Title.String())
-		next.Summary = strings.TrimSpace(item.Summary.String())
-		next.Content = strings.TrimSpace(item.Content.String())
+		next := &Item{
+			ID:      strings.TrimSpace(item.ID),
+			Title:   item.Title,
+			Summary: strings.TrimSpace(item.Summary.String()),
+			Content: strings.TrimSpace(item.Content.String()),
+		}
 
 		if next.Content == "" {
 			next.Content = strings.TrimSpace(item.Description)
@@ -56,7 +57,6 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 
 		next.SetMetadata(item.Metadata)
 
-		next.ID = strings.TrimSpace(item.ID)
 		for _, link := range item.Links {
 			if link.Rel == "alternate" || link.Rel == "" {
 				next.Link = link.Href
@@ -69,13 +69,7 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 			}
 		}
 
-		if len(next.Link) == 0 && (strings.HasPrefix(next.ID, "http://") || strings.HasPrefix(next.ID, "https://")) {
-			next.Link = next.ID
-		}
-
-		if len(next.Link) == 0 && len(next.Enclosures) > 0 {
-			next.Link = next.Enclosures[0].URL
-		}
+		next.EnsureLinks()
 
 		out.Items = append(out.Items, next)
 	}
@@ -97,7 +91,7 @@ func parseAtom(data []byte, options ParseOptions) (*Feed, error) {
 
 type atomFeed struct {
 	XMLName     xml.Name   `xml:"feed"`
-	Title       string     `xml:"title"`
+	Title       Title      `xml:"title"`
 	Description string     `xml:"subtitle"`
 	Links       []atomLink `xml:"link"`
 	Items       []atomItem `xml:"entry"`
@@ -107,7 +101,7 @@ type atomFeed struct {
 
 type atomItem struct {
 	XMLName     xml.Name    `xml:"entry"`
-	Title       atomContent `xml:"title"`
+	Title       Title       `xml:"title"`
 	Summary     atomContent `xml:"summary"`
 	Content     atomContent `xml:"content"`
 	Description string      `xml:"description"`

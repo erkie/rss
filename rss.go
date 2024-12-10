@@ -69,7 +69,7 @@ func Parse(data []byte, options ParseOptions) (*Feed, error) {
 // Feed is the top-level structure.
 type Feed struct {
 	Type        string
-	Title       string
+	Title       Title
 	Description string
 	Link        string // Link to the creator's website.
 	UpdateURL   string // URL of the feed itself.
@@ -115,7 +115,7 @@ func (f *Feed) String() string {
 
 // Item represents a single story.
 type Item struct {
-	Title      string            `json:"title"`
+	Title      Title             `json:"title"`
 	Summary    string            `json:"summary"`
 	Content    string            `json:"content"`
 	Link       string            `json:"link"`
@@ -135,6 +135,18 @@ func (i *Item) SetMetadata(metadata Metadata) {
 	}
 
 	i.Date = metadata.PublishedDate()
+}
+
+func (i *Item) EnsureLinks() {
+	// If no link specified and ID/GUID looks like link
+	if len(i.Link) == 0 && (strings.HasPrefix(i.ID, "http://") || strings.HasPrefix(i.ID, "https://")) {
+		i.Link = i.ID
+	}
+
+	// If no link still, we can use an enclosure URL
+	if len(i.Link) == 0 && len(i.Enclosures) > 0 {
+		i.Link = i.Enclosures[0].URL
+	}
 }
 
 func (i *Item) String() string {

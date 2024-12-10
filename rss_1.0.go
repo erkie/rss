@@ -50,9 +50,7 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 
 	out.Items = make([]*Item, 0, len(feed.Items))
 
-	// Process items.
 	for _, item := range feed.Items {
-
 		if item.ID == "" {
 			if len(item.Links) == 0 && len(item.Description) == 0 && len(item.Content) == 0 {
 				if debug {
@@ -64,8 +62,12 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 			}
 		}
 
-		next := new(Item)
-		next.Summary = strings.TrimSpace(item.Description)
+		next := &Item{
+			ID:      strings.TrimSpace(item.ID),
+			Title:   item.Title,
+			Summary: strings.TrimSpace(item.Description),
+			Content: strings.TrimSpace(item.Content),
+		}
 
 		if item.Links != nil {
 			for _, link := range item.Links {
@@ -76,11 +78,8 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 			}
 		}
 
-		next.Title = strings.TrimSpace(item.Title)
-		next.Content = strings.TrimSpace(item.Content)
 		next.SetMetadata(item.Metadata)
 
-		next.ID = strings.TrimSpace(item.ID)
 		if next.ID == "" && item.RDFAbout != "" {
 			next.ID = strings.TrimSpace(item.RDFAbout)
 			if next.Meta == nil {
@@ -88,18 +87,15 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 			}
 			next.Meta["id_from_rdf_about"] = "1"
 		}
+
 		if len(item.Enclosures) > 0 {
 			next.Enclosures = make([]*Enclosure, len(item.Enclosures))
 			for i := range item.Enclosures {
 				next.Enclosures[i] = item.Enclosures[i].Enclosure()
 			}
 		}
-		if len(next.Link) == 0 && (strings.HasPrefix(next.ID, "http://") || strings.HasPrefix(next.ID, "https://")) {
-			next.Link = next.ID
-		}
-		if len(next.Link) == 0 && len(next.Enclosures) > 0 {
-			next.Link = next.Enclosures[0].URL
-		}
+
+		next.EnsureLinks()
 
 		out.Items = append(out.Items, next)
 	}
@@ -161,7 +157,7 @@ type rss1_0Feed struct {
 
 type rss1_0Channel struct {
 	XMLName     xml.Name         `xml:"channel"`
-	Title       string           `xml:"title"`
+	Title       Title            `xml:"title"`
 	Description string           `xml:"description"`
 	Links       []rss1_0Link     `xml:"link"`
 	MinsToLive  string           `xml:"ttl"`
@@ -178,7 +174,7 @@ type rss1_0Sequence struct {
 
 type rss1_0Item struct {
 	XMLName     xml.Name          `xml:"item"`
-	Title       string            `xml:"title"`
+	Title       Title             `xml:"title"`
 	Description string            `xml:"description"`
 	Content     string            `xml:"encoded"`
 	Links       []string          `xml:"link"`

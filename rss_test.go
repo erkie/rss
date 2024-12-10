@@ -28,7 +28,7 @@ func TestParseTitle(t *testing.T) {
 			t.Fatalf("Parsing %s: %v", test, err)
 		}
 
-		if feed.Title != want {
+		if feed.Title.String() != want {
 			t.Fatalf("%s: expected %s, got %s", test, want, feed.Title)
 		}
 	}

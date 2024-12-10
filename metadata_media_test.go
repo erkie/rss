@@ -22,7 +22,7 @@ func TestMediaGroup(t *testing.T) {
 
 	item := feed.Items[0]
 
-	if item.Title != "title!" {
+	if item.Title.String() != "title!" {
 		t.Errorf("Expected title 'title!', got %s", item.Title)
 	}
 
