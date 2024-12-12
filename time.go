@@ -75,7 +75,9 @@ func parseTime(s string) time.Time {
 }
 
 func defaultTime() time.Time {
-	return time.Unix(0, 0)
+	// Apparently time.Unix(0, 0) is not time.IsZero()
+	// return time.Unix(0, 0)
+	return time.Time{}
 }
 
 // This post explains why this is needed: https://stackoverflow.com/a/66606191/224732
