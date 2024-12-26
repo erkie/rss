@@ -53,8 +53,8 @@ type MediaDescription struct {
 type MediaThumbnail struct {
 	URL    string `xml:"url,attr"`
 	Type   string `xml:"type,attr"`
-	Width  int    `xml:"width,attr"`
-	Height int    `xml:"height,attr"`
+	Width  string `xml:"width,attr"`
+	Height string `xml:"height,attr"`
 }
 
 type MediaCommunity struct {
@@ -67,12 +67,12 @@ type MediaRating struct {
 }
 
 type MediaStarRating struct {
-	Count   int     `xml:"count,attr"`
-	Average float64 `xml:"average,attr"`
-	Min     int     `xml:"min,attr"`
-	Max     int     `xml:"max,attr"`
+	Count   string `xml:"count,attr"`
+	Average string `xml:"average,attr"`
+	Min     string `xml:"min,attr"`
+	Max     string `xml:"max,attr"`
 }
 
 type MediaStatistics struct {
-	Views int `xml:"views,attr"`
+	Views string `xml:"views,attr"`
 }
