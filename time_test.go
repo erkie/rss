@@ -16,23 +16,23 @@ func TestParseTimeUsingOnlyDefaultLayouts(t *testing.T) {
 	// Positive cases
 	for _, layout := range originalLayouts {
 		s := timeVal.Format(layout)
-		if tv := parseTime(s); !tv.Equal(timeVal) {
+		if tv := ParseTime(s); !tv.Equal(timeVal) {
 			t.Errorf("expected no err and times to equal, and time value %v", tv)
 		}
 	}
 
 	// Negative cases
-	parseTime("")
-	parseTime("abc")
+	ParseTime("")
+	ParseTime("abc")
 
 	custom := timeVal.Format(customLayout)
-	parseTime(custom)
+	ParseTime(custom)
 }
 
 func TestParseTimeUsingCustomLayoutsPrepended(t *testing.T) {
 	TimeLayouts = append([]string{customLayout}, originalLayouts...)
 	custom := timeVal.Format(customLayout)
-	if tv := parseTime(custom); !tv.Equal(timeVal) {
+	if tv := ParseTime(custom); !tv.Equal(timeVal) {
 		t.Errorf("expected no err and times to equal, and time value %v", tv)
 	}
 	TimeLayouts = originalLayouts
@@ -41,7 +41,7 @@ func TestParseTimeUsingCustomLayoutsPrepended(t *testing.T) {
 func TestParseTimeUsingCustomLayoutsAppended(t *testing.T) {
 	TimeLayouts = append(originalLayouts, customLayout)
 	custom := timeVal.Format(customLayout)
-	if tv := parseTime(custom); !tv.Equal(timeVal) {
+	if tv := ParseTime(custom); !tv.Equal(timeVal) {
 		t.Errorf("expected no err and times to equal, and time value %v", tv)
 	}
 	TimeLayouts = originalLayouts
@@ -49,7 +49,7 @@ func TestParseTimeUsingCustomLayoutsAppended(t *testing.T) {
 
 func TestParseWithTwoDigitYear(t *testing.T) {
 	s := "Sun, 18 Dec 16 18:25:00 +0100"
-	if tv := parseTime(s); tv.Year() != 2016 {
+	if tv := ParseTime(s); tv.Year() != 2016 {
 		t.Errorf("expected no err and year to be 2016, and year %d", tv.Year())
 	}
 }
@@ -74,7 +74,7 @@ func TestParser(t *testing.T) {
 		time.Date(2024, 6, 13, 10, 15, 0, 0, time.UTC),
 	}
 	for i, form := range examples {
-		receivedTime := parseTime(form)
+		receivedTime := ParseTime(form)
 		if receivedTime.UTC() != expecteds[i] {
 			t.Errorf(
 				"%d: expected no err and year to be (expected) %s = %s (received)",

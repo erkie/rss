@@ -58,7 +58,7 @@ var TimeLayouts = []string{
 	"02-Jan-2006 15:04:05",
 }
 
-func parseTime(s string) time.Time {
+func ParseTime(s string) time.Time {
 	s = strings.TrimSpace(s)
 
 	var e error

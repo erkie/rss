@@ -19,19 +19,19 @@ func (m *Metadata) PublishedDate() time.Time {
 	date := defaultTime()
 
 	if m.PubDate != "" {
-		date = parseTime(m.PubDate)
+		date = ParseTime(m.PubDate)
 	}
 
 	if date.IsZero() && m.Published != "" {
-		date = parseTime(m.Published)
+		date = ParseTime(m.Published)
 	}
 
 	if date.IsZero() && m.Date != "" {
-		date = parseTime(m.Date)
+		date = ParseTime(m.Date)
 	}
 
 	if date.IsZero() && m.Updated != "" {
-		date = parseTime(m.Updated)
+		date = ParseTime(m.Updated)
 	}
 
 	return date
