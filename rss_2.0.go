@@ -65,10 +65,11 @@ func parseRSS2(data []byte, options ParseOptions) (*Feed, error) {
 		}
 
 		next := &Item{
-			ID:      strings.TrimSpace(item.ID),
-			Title:   item.Title,
-			Summary: strings.TrimSpace(item.Description),
-			Content: strings.TrimSpace(item.Content),
+			ID:       strings.TrimSpace(item.ID),
+			Title:    item.Title,
+			Summary:  strings.TrimSpace(item.Description),
+			Content:  strings.TrimSpace(item.Content),
+			Comments: strings.TrimSpace(item.Comments),
 		}
 
 		if item.Links != nil {
@@ -139,6 +140,7 @@ type rss2_0Item struct {
 	Links       []string          `xml:"link"`
 	Href        string            `xml:"href"` // Non-standard but found in the wild...
 	ID          string            `xml:"guid"`
+	Comments    string            `xml:"comments"`
 	Enclosures  []rss2_0Enclosure `xml:"enclosure"`
 
 	Metadata

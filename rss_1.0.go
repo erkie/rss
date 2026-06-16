@@ -63,10 +63,11 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 		}
 
 		next := &Item{
-			ID:      strings.TrimSpace(item.ID),
-			Title:   item.Title,
-			Summary: strings.TrimSpace(item.Description),
-			Content: strings.TrimSpace(item.Content),
+			ID:       strings.TrimSpace(item.ID),
+			Title:    item.Title,
+			Summary:  strings.TrimSpace(item.Description),
+			Content:  strings.TrimSpace(item.Content),
+			Comments: strings.TrimSpace(item.Comments),
 		}
 
 		if item.Links != nil {
@@ -180,6 +181,7 @@ type rss1_0Item struct {
 	Links       []string          `xml:"link"`
 	ID          string            `xml:"guid"`
 	RDFAbout    string            `xml:"about,attr"`
+	Comments    string            `xml:"comments"`
 	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
 
 	Metadata

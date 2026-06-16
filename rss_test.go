@@ -68,6 +68,35 @@ func TestEnclosure(t *testing.T) {
 	}
 }
 
+func TestComments(t *testing.T) {
+	tests := map[string]string{
+		"rss_1.0_comments": "http://www.xul.fr/feed/RSS-1.0.html#comments",
+		"rss_2.0_comments": "http://www.wikipedia.org/comments",
+	}
+
+	for test, want := range tests {
+		data, err := ioutil.ReadFile("testdata/" + test)
+		if err != nil {
+			t.Fatalf("Reading %s: %v", test, err)
+		}
+
+		feed, err := Parse(data, ParseOptions{})
+		if err != nil {
+			t.Fatalf("Parsing %s: %v", test, err)
+		}
+
+		if len(feed.Items) == 0 {
+			t.Fatalf("%s: no items parsed", test)
+		}
+
+		for _, item := range feed.Items {
+			if item.Comments != want {
+				t.Errorf("%s: expected comments %q, got %q", test, want, item.Comments)
+			}
+		}
+	}
+}
+
 func TestEnclosureLink(t *testing.T) {
 	tests := map[string]string{
 		"rss_1.0_enclosurelink":   "http://foo.bar/baz.mp3",

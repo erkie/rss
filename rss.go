@@ -119,6 +119,7 @@ type Item struct {
 	Summary    string            `json:"summary"`
 	Content    string            `json:"content"`
 	Link       string            `json:"link"`
+	Comments   string            `json:"comments"`
 	Date       time.Time         `json:"date"`
 	ID         string            `json:"id"`
 	Enclosures []*Enclosure      `json:"enclosures"`
