@@ -97,6 +97,52 @@ func TestComments(t *testing.T) {
 	}
 }
 
+// TestCommentsWithSlashCount guards against the slash-namespaced
+// <slash:comments> count clobbering the core <comments> URL. Both elements
+// share the local name "comments", so without namespace-qualified parsing
+// Go's decoder maps both to the same field and the count wins.
+func TestCommentsWithSlashCount(t *testing.T) {
+	type want struct {
+		url   string
+		count string
+	}
+	tests := map[string]want{
+		"rss_2.0_wordpress_comments": {
+			url:   "https://blog.example.com/a-post/#comments",
+			count: "19",
+		},
+		"rss_1.0_slash_comments": {
+			url:   "http://www.xul.fr/feed/RSS-1.0.html#comments",
+			count: "42",
+		},
+	}
+
+	for test, w := range tests {
+		data, err := ioutil.ReadFile("testdata/" + test)
+		if err != nil {
+			t.Fatalf("Reading %s: %v", test, err)
+		}
+
+		feed, err := Parse(data, ParseOptions{})
+		if err != nil {
+			t.Fatalf("Parsing %s: %v", test, err)
+		}
+
+		if len(feed.Items) == 0 {
+			t.Fatalf("%s: no items parsed", test)
+		}
+
+		for _, item := range feed.Items {
+			if item.Comments != w.url {
+				t.Errorf("%s: expected comments URL %q, got %q", test, w.url, item.Comments)
+			}
+			if item.CommentCount != w.count {
+				t.Errorf("%s: expected comment count %q, got %q", test, w.count, item.CommentCount)
+			}
+		}
+	}
+}
+
 func TestEnclosureLink(t *testing.T) {
 	tests := map[string]string{
 		"rss_1.0_enclosurelink":   "http://foo.bar/baz.mp3",

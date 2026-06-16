@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+<channel>
+ <title>WP Blog</title>
+ <link>https://blog.example.com</link>
+ <description>An example WordPress feed</description>
+ <item>
+  <title>A post with comments</title>
+  <link>https://blog.example.com/a-post/</link>
+  <guid isPermaLink="false">https://blog.example.com/?p=123</guid>
+  <pubDate>Mon, 06 Sep 2009 16:45:00 +0000</pubDate>
+  <comments>https://blog.example.com/a-post/#comments</comments>
+  <wfw:commentRss>https://blog.example.com/a-post/feed/</wfw:commentRss>
+  <slash:comments>19</slash:comments>
+ </item>
+</channel>
+</rss>

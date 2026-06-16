@@ -115,15 +115,16 @@ func (f *Feed) String() string {
 
 // Item represents a single story.
 type Item struct {
-	Title      Title             `json:"title"`
-	Summary    string            `json:"summary"`
-	Content    string            `json:"content"`
-	Link       string            `json:"link"`
-	Comments   string            `json:"comments"`
-	Date       time.Time         `json:"date"`
-	ID         string            `json:"id"`
-	Enclosures []*Enclosure      `json:"enclosures"`
-	Meta       map[string]string `json:"meta"`
+	Title        Title             `json:"title"`
+	Summary      string            `json:"summary"`
+	Content      string            `json:"content"`
+	Link         string            `json:"link"`
+	Comments     string            `json:"comments"`
+	CommentCount string            `json:"comment_count"`
+	Date         time.Time         `json:"date"`
+	ID           string            `json:"id"`
+	Enclosures   []*Enclosure      `json:"enclosures"`
+	Meta         map[string]string `json:"meta"`
 
 	Metadata
 }

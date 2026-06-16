@@ -63,11 +63,12 @@ func parseRSS1(data []byte, options ParseOptions) (*Feed, error) {
 		}
 
 		next := &Item{
-			ID:       strings.TrimSpace(item.ID),
-			Title:    item.Title,
-			Summary:  strings.TrimSpace(item.Description),
-			Content:  strings.TrimSpace(item.Content),
-			Comments: strings.TrimSpace(item.Comments),
+			ID:           strings.TrimSpace(item.ID),
+			Title:        item.Title,
+			Summary:      strings.TrimSpace(item.Description),
+			Content:      strings.TrimSpace(item.Content),
+			Comments:     strings.TrimSpace(item.Comments),
+			CommentCount: strings.TrimSpace(item.SlashComments),
 		}
 
 		if item.Links != nil {
@@ -174,15 +175,21 @@ type rss1_0Sequence struct {
 }
 
 type rss1_0Item struct {
-	XMLName     xml.Name          `xml:"item"`
-	Title       Title             `xml:"title"`
-	Description string            `xml:"description"`
-	Content     string            `xml:"encoded"`
-	Links       []string          `xml:"link"`
-	ID          string            `xml:"guid"`
-	RDFAbout    string            `xml:"about,attr"`
-	Comments    string            `xml:"comments"`
-	Enclosures  []rss1_0Enclosure `xml:"enclosure"`
+	XMLName     xml.Name `xml:"item"`
+	Title       Title    `xml:"title"`
+	Description string   `xml:"description"`
+	Content     string   `xml:"encoded"`
+	Links       []string `xml:"link"`
+	ID          string   `xml:"guid"`
+	RDFAbout    string   `xml:"about,attr"`
+	// SlashComments captures the slash-namespaced <slash:comments> element (a
+	// comment *count*). It is qualified by its namespace URI and MUST be
+	// declared before Comments: Go's xml decoder matches fields in order, and
+	// the namespace-less Comments tag would otherwise also match
+	// <slash:comments> and clobber the URL with the count.
+	SlashComments string            `xml:"http://purl.org/rss/1.0/modules/slash/ comments"`
+	Comments      string            `xml:"comments"`
+	Enclosures    []rss1_0Enclosure `xml:"enclosure"`
 
 	Metadata
 }
